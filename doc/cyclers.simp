@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="13.85" multi-file="no" uid="simp41cb0e816c7e4b82905deb2a17ae337c">
+  <meta>
+    <name>cyclers</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>8</value>
+      </counter>
+      <counter>
+        <item-type type-id="frame" type="Frame" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type type-id="erd-entity" type="Entity" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type stereotype="component" type-id="component" type="Component" />
+        <value>3</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>14</value>
+      </counter>
+      <counter>
+        <item-type type-id="frame" type="Frame" />
+        <value>5</value>
+      </counter>
+      <counter>
+        <item-type type-id="erd-entity" type="Entity" />
+        <value>18</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment" type="Comment" />
+        <value>6</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment-connector" type="Comment Connector" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type type-id="erd-relationship" type="Relationship" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="Universal Connector" />
+        <value>6</value>
+      </counter>
+      <counter>
+        <item-type type-id="component" type="Component" />
+        <value>13</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlComponentDiagram</type>
+        <value>2</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlPackageDiagram</type>
+        <value>2</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.Other.EntityRelationshipDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Erd.ErdEntityAttribute</type>
+        <value>70</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-4ef65c5b45a64919920277d375e9f112" name="" task-id-sequence="0">
+    <working-schedule uid="ws-11f4e4cac7564470b8d641bef2e577dd" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+    <persons>
+      <person id="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-b1ddd2cdda1b481091ee66e9d7e6741b" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-15537bec6aa54e53b6bb9bf6cb1169b9" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="MySqlTypes.xml" />
+      <type-set file="Python.xml" />
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <parameters />
+      <types>
+        <type id="varchar (MySql.varchar)" name="varchar (MySql.varchar)" />
+        <type id="E" name="E" />
+        <type id="bigint unsigned (MySql.bigint unsigned)" name="bigint unsigned (MySql.bigint unsigned)" />
+      </types>
+    </custom-types>
+  </types>
+  <items>
+    <item id="dicd9cd37ed03441b48c75abd6bac0aef44918" cid="CN001" type="comment-connector" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:25:51" from="8dc2424f10f24bdcb30354d50d87f841" to="a462ad5aa6cf4bf4bad6d937575ade97" />
+    <item id="8dc2424f10f24bdcb30354d50d87f841" cid="CMT002" type="comment" name="Comment" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:25:51">
+      <comment>ServerFilePath se podría eleminar?</comment>
+    </item>
+  </items>
+  <models>
+    <model id="pf21b06657b194ff5ae76d09595fcbbc2_779415695" name="Model1" namespace="" order-index="1" expanded="true">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>06/29/2023 12:58:13</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-component" id="pe588d84103e54abb931e30f5a3c4129f_157848642" name="ComponentsDiagram" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="0,-230" zoom="0.7">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>06/29/2023 12:58:13</creation-date>
+          <change-date>07/03/2023 08:34:44</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di1830f8eab361403aa9537c9ddde2a0a94381" cid="CPT007" type="component" name="MID_DABS" owner="di33593aadb2a74f81ad2461c24e19ec197852" creation-date="07/03/2023 08:33:00" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="57a54de4aee6428b91c2ff77dc6b0859_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="dic424c9dc07eb441eae665a4dace26ff23567" cid="CPT011" type="component" name="SYS_SHD" owner="di041be8edb19348169262ee571d64652e3164" creation-date="07/03/2023 08:34:24" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="e2bbd17c502d477c95a115b2410a0ce3_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="dieafcc92edecb4831a2eca7f62fe07f7d7117" cid="ELEM003" type="frame" name="APP" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:09:16">
+            <owned-items />
+            <frame />
+          </item>
+          <item id="di52e9d20233824b7db6d09b2b0bde0b7e6159" cid="CPT012" type="component" name="SYS_CONF" owner="di041be8edb19348169262ee571d64652e3164" creation-date="07/03/2023 08:34:24" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="e2bbd17c502d477c95a115b2410a0ce3_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="die3a7299fd4494663ad32dbc7a6a1fd2d5166" cid="CPT002" type="component" name="DRV_BK" owner="c591409168da400595dd158907f53d11" creation-date="07/03/2023 08:17:41" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="005965939887431b9fcc80dd67a0cb41_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di180be9ab6da8448d86990a0be157a4a81531" cid="CPT004" type="component" name="DRV_CAN" owner="c591409168da400595dd158907f53d11" creation-date="07/03/2023 08:17:41" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="005965939887431b9fcc80dd67a0cb41_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di39e105aacabc4bba9c2dfe17b9ab92965851" cid="CPT005" type="component" name="DRV_SCPI" owner="c591409168da400595dd158907f53d11" creation-date="07/03/2023 08:17:41" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="005965939887431b9fcc80dd67a0cb41_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di33593aadb2a74f81ad2461c24e19ec197852" cid="ELEM002" type="frame" name="MID" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:09:16">
+            <owned-items />
+            <frame />
+          </item>
+          <item id="die7458004519c4d3e9d0a30105f3628b17063" cid="CPT008" type="component" name="APP_MAN" owner="dieafcc92edecb4831a2eca7f62fe07f7d7117" creation-date="07/03/2023 08:33:00" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="57a54de4aee6428b91c2ff77dc6b0859_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="005965939887431b9fcc80dd67a0cb41" cid="CPT001" type="component" name="DRV_EA" owner="c591409168da400595dd158907f53d11" creation-date="07/03/2023 08:17:41">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="005965939887431b9fcc80dd67a0cb41_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="c591409168da400595dd158907f53d11" cid="ELEM001" type="frame" name="DRV" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:09:16">
+            <owned-items />
+            <frame />
+          </item>
+          <item id="e2bbd17c502d477c95a115b2410a0ce3" cid="CPT010" type="component" name="SYS_LOG" owner="di041be8edb19348169262ee571d64652e3164" creation-date="07/03/2023 08:34:24">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="e2bbd17c502d477c95a115b2410a0ce3_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di903bdc66973343d1b31dde5c914d985e2312" cid="CPT003" type="component" name="DRV_RS" owner="c591409168da400595dd158907f53d11" creation-date="07/03/2023 08:17:41" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="005965939887431b9fcc80dd67a0cb41_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di2b54705cd02143bc86dd5919a175eb066328" cid="CPT009" type="component" name="APP_DIAG" owner="dieafcc92edecb4831a2eca7f62fe07f7d7117" creation-date="07/03/2023 08:33:00" visibility="undefined">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="57a54de4aee6428b91c2ff77dc6b0859_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="57a54de4aee6428b91c2ff77dc6b0859" cid="CPT006" type="component" name="MID_PWR" owner="di33593aadb2a74f81ad2461c24e19ec197852" creation-date="07/03/2023 08:33:00">
+            <stereotypes>
+              <stereotype name="component" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="57a54de4aee6428b91c2ff77dc6b0859_component_c" type="component" ref="" />
+            </stereotype-instances>
+            <component />
+          </item>
+          <item id="di041be8edb19348169262ee571d64652e3164" cid="ELEM004" type="frame" name="SYS" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:09:16">
+            <owned-items />
+            <frame />
+          </item>
+        </abstract-items>
+        <layer id="4ebcda97c24e4ab3bc38ca31023d7fe9" name="Default" visible="true" enabled="true" locked="false">
+          <item id="c591409168da400595dd158907f53d11" iid="7a4bbc4745a547ffb5622455101c5f59" creation-date="06/29/2023 13:09:16" order-index="0" type="entity">
+            <layout ax="460" ay="390" awidth="780" aheight="280" x="455" y="390" width="780" height="280" expanded="460,390,780,280" collapsed="0,0,0,0" rotation-center="-240,-40" />
+          </item>
+          <item id="di33593aadb2a74f81ad2461c24e19ec197852" iid="ec82a796d01c4f1db89008e1f548c79e" creation-date="06/29/2023 13:09:16" order-index="0" type="entity">
+            <layout ax="460" ay="60" awidth="780" aheight="280" x="460" y="60" width="780" height="280" expanded="460,60,780,280" collapsed="0,0,0,0" rotation-center="-240,-40" />
+          </item>
+          <item id="die3a7299fd4494663ad32dbc7a6a1fd2d5166" iid="5e15699f70024a598360ce1014609616" container="c591409168da400595dd158907f53d11" container-iid="7a4bbc4745a547ffb5622455101c5f59" show-fields="false" creation-date="07/03/2023 08:17:41" order-index="1" type="entity">
+            <layout ax="710" ay="450" awidth="110" aheight="50" x="710" y="450" width="110" height="50" expanded="710,450,110,50" collapsed="0,0,0,0" rotation-center="0.5,1.5" />
+          </item>
+          <item id="di1830f8eab361403aa9537c9ddde2a0a94381" iid="723478cc46524c37bab8adf576af3f56" container="di33593aadb2a74f81ad2461c24e19ec197852" container-iid="ec82a796d01c4f1db89008e1f548c79e" show-fields="false" creation-date="07/03/2023 08:33:00" order-index="2" type="entity">
+            <layout ax="820" ay="120" awidth="130" aheight="50" x="820" y="120" width="130" height="50" expanded="820,120,130,50" collapsed="0,0,0,0" rotation-center="5,55" />
+          </item>
+          <item id="57a54de4aee6428b91c2ff77dc6b0859" iid="6137ff40399b4351bcb1abdfda44401a" container="di33593aadb2a74f81ad2461c24e19ec197852" container-iid="ec82a796d01c4f1db89008e1f548c79e" show-fields="false" creation-date="07/03/2023 08:33:00" order-index="2" type="entity">
+            <layout ax="540" ay="120" awidth="130" aheight="50" x="535" y="120" width="130" height="50" expanded="540,120,130,50" collapsed="0,0,0,0" rotation-center="5,55" />
+          </item>
+          <item id="di903bdc66973343d1b31dde5c914d985e2312" iid="f418c24f00964effaa5ef9a69ccf8c95" container="c591409168da400595dd158907f53d11" container-iid="7a4bbc4745a547ffb5622455101c5f59" show-fields="false" creation-date="07/03/2023 08:17:41" order-index="1" type="entity">
+            <layout ax="910" ay="450" awidth="110" aheight="50" x="910" y="450" width="110" height="50" expanded="910,450,110,50" collapsed="0,0,0,0" rotation-center="0.5,1.5" />
+          </item>
+          <item id="di180be9ab6da8448d86990a0be157a4a81531" iid="195a656710434095bde21806a579fd9a" container="c591409168da400595dd158907f53d11" container-iid="7a4bbc4745a547ffb5622455101c5f59" show-fields="false" creation-date="07/03/2023 08:17:41" order-index="1" type="entity">
+            <layout ax="600" ay="590" awidth="110" aheight="50" x="600" y="590" width="110" height="50" expanded="600,590,110,50" collapsed="0,0,0,0" rotation-center="0.5,1.5" />
+          </item>
+          <item id="di39e105aacabc4bba9c2dfe17b9ab92965851" iid="7224808d18a443aeb3bd65886a3fe435" container="c591409168da400595dd158907f53d11" container-iid="7a4bbc4745a547ffb5622455101c5f59" show-fields="false" creation-date="07/03/2023 08:17:41" order-index="1" type="entity">
+            <layout ax="880" ay="590" awidth="110" aheight="50" x="880" y="590" width="110" height="50" expanded="880,590,110,50" collapsed="0,0,0,0" rotation-center="0.5,1.5" />
+          </item>
+          <item id="005965939887431b9fcc80dd67a0cb41" iid="0423813ef88c47e2a5603ebc0dfa54c5" container="c591409168da400595dd158907f53d11" container-iid="7a4bbc4745a547ffb5622455101c5f59" show-fields="false" creation-date="07/03/2023 08:17:41" order-index="1" type="entity">
+            <layout ax="510" ay="450" awidth="110" aheight="50" x="507" y="450" width="110" height="50" expanded="510,450,110,50" collapsed="0,0,0,0" rotation-center="0.5,1.5" />
+          </item>
+          <item id="dieafcc92edecb4831a2eca7f62fe07f7d7117" iid="84cac98856bd4408a870e0ed75ab05b6" creation-date="06/29/2023 13:09:16" order-index="0" type="entity">
+            <layout ax="460" ay="-280" awidth="780" aheight="280" x="460" y="-280" width="780" height="280" expanded="460,-280,780,280" collapsed="0,0,0,0" rotation-center="-240,-40" />
+          </item>
+          <item id="di041be8edb19348169262ee571d64652e3164" iid="a814cb0d98e44bc7a9feb79e2db50e7b" creation-date="06/29/2023 13:09:16" order-index="0" type="entity">
+            <layout ax="110" ay="-280" awidth="280" aheight="950" x="110" y="-280" width="280" height="950" expanded="90,-280,280,950" collapsed="0,0,0,0" rotation-center="10,-375" />
+          </item>
+          <item id="di2b54705cd02143bc86dd5919a175eb066328" iid="b86f5fbe4f1141e0b30e0d377c9e4215" container="dieafcc92edecb4831a2eca7f62fe07f7d7117" container-iid="84cac98856bd4408a870e0ed75ab05b6" show-fields="false" creation-date="07/03/2023 08:33:00" order-index="2" type="entity">
+            <layout ax="1050" ay="-120" awidth="130" aheight="50" x="1050" y="-120" width="130" height="50" expanded="1050,-120,130,50" collapsed="0,0,0,0" rotation-center="5,55" />
+          </item>
+          <item id="dic424c9dc07eb441eae665a4dace26ff23567" iid="bb44f7b4a30143c2bbcec10c55cf6e2d" container="di041be8edb19348169262ee571d64652e3164" container-iid="a814cb0d98e44bc7a9feb79e2db50e7b" show-fields="false" creation-date="07/03/2023 08:34:24" order-index="3" type="entity">
+            <layout ax="160" ay="-30" awidth="140" aheight="50" x="160" y="-30" width="140" height="50" expanded="160,-30,140,50" collapsed="0,0,0,0" rotation-center="0,55" />
+          </item>
+          <item id="di52e9d20233824b7db6d09b2b0bde0b7e6159" iid="c843af24ee8e483d9e478b9dacfdccad" container="di041be8edb19348169262ee571d64652e3164" container-iid="a814cb0d98e44bc7a9feb79e2db50e7b" show-fields="false" creation-date="07/03/2023 08:34:24" order-index="3" type="entity">
+            <layout ax="160" ay="90" awidth="140" aheight="50" x="160" y="90" width="140" height="50" expanded="160,90,140,50" collapsed="0,0,0,0" rotation-center="0,55" />
+          </item>
+          <item id="e2bbd17c502d477c95a115b2410a0ce3" iid="7c7a6dfb0fc843c4a27fa32c9ce9f765" container="di041be8edb19348169262ee571d64652e3164" container-iid="a814cb0d98e44bc7a9feb79e2db50e7b" show-fields="false" creation-date="07/03/2023 08:34:24" order-index="3" type="entity">
+            <layout ax="160" ay="-140" awidth="140" aheight="50" x="160" y="-140" width="140" height="50" expanded="160,-140,140,50" collapsed="0,0,0,0" rotation-center="0,55" />
+          </item>
+          <item id="die7458004519c4d3e9d0a30105f3628b17063" iid="f238daaea51a440ebfc888918548e7aa" container="dieafcc92edecb4831a2eca7f62fe07f7d7117" container-iid="84cac98856bd4408a870e0ed75ab05b6" show-fields="false" creation-date="07/03/2023 08:33:00" order-index="2" type="entity">
+            <layout ax="780" ay="-190" awidth="130" aheight="50" x="780" y="-190" width="130" height="50" expanded="780,-190,130,50" collapsed="0,0,0,0" rotation-center="5,55" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-component" id="pc944c9be78ae4cde9c38e9d945ed18bc_456459804" name="ProjectStructure" order-index="2" overview-order-index="0" uid="" name-style="" auto-routed-paths="false" default-line-style="default" zoom="0.6">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>06/29/2023 13:00:54</creation-date>
+          <change-date>07/03/2023 08:13:39</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di5aa0f18af99446b08cd9a36c0715c2264975" cid="PKG009" type="package" name="SYS" owner="9d849eb3eb104012a2586f41fceee148" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:08" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="fa3eb1a9303a403c9d567757cde78b1b" cid="PKG006" type="package" name="APP" owner="9d849eb3eb104012a2586f41fceee148" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:08" visibility="undefined" />
+          <item id="e26a34aa800f4a908a1c0fc3399fe478" cid="PKG010" type="package" name="SYS_LOG" owner="di5aa0f18af99446b08cd9a36c0715c2264975" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:43" visibility="undefined" />
+          <item id="96ae22d8d9f843bfa3f518cfb1fccbe4" cid="PKG004" type="package" name="doc" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:00:58" visibility="undefined" />
+          <item id="di22cab7a1a45d43f7b81aa1bcabf131ae3857" cid="PKG013" type="package" name="SYS_CONF" owner="di5aa0f18af99446b08cd9a36c0715c2264975" creation-date="06/29/2023 13:01:43" visibility="undefined" />
+          <item id="di217cebddc8984b3d86cb20c4412da7b79458" cid="PKG007" type="package" name="MID" owner="9d849eb3eb104012a2586f41fceee148" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:08" visibility="undefined" />
+          <item id="di06d13ca0734f4430a66114ae71649a272328" cid="PKG011" type="package" name="SYS_SHD" owner="di5aa0f18af99446b08cd9a36c0715c2264975" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:43" visibility="undefined" />
+          <item id="639df2cf668d424497d5a272954188e7" cid="PKG012" type="package" name="log" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:02:14" visibility="undefined" />
+          <item id="9d849eb3eb104012a2586f41fceee148" cid="PKG005" type="package" name="code" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:04" visibility="undefined">
+            <owned-items />
+          </item>
+          <item id="di5031950942aa44cdb3f63ce3328eda418595" cid="PKG008" type="package" name="DRV" owner="9d849eb3eb104012a2586f41fceee148" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:01:08" visibility="undefined" />
+        </abstract-items>
+        <layer id="c237e4a97e364fbbac80038044210bcc" name="Default" visible="true" enabled="true" locked="false">
+          <item id="96ae22d8d9f843bfa3f518cfb1fccbe4" iid="edb1d13e24f74e198a1a120884453d8b" creation-date="06/29/2023 13:00:58" order-index="0" type="entity">
+            <layout ax="130" ay="130" awidth="300" aheight="200" x="128" y="134" width="300" height="200" expanded="130,130,300,200" collapsed="0,0,0,0" />
+            <package name-in-body="false" />
+          </item>
+          <item id="9d849eb3eb104012a2586f41fceee148" iid="037c7617812145b6b606981cf7de3335" creation-date="06/29/2023 13:01:04" order-index="1" type="entity">
+            <layout ax="660" ay="130" awidth="800" aheight="390" x="655" y="129" width="800" height="390" expanded="660,130,800,390" collapsed="0,0,0,0" rotation-center="-150,-25" />
+            <package name-in-body="false" />
+          </item>
+          <item id="fa3eb1a9303a403c9d567757cde78b1b" iid="b53c9ed53f6b426dabfbc744b9dde372" container="9d849eb3eb104012a2586f41fceee148" container-iid="037c7617812145b6b606981cf7de3335" creation-date="06/29/2023 13:01:08" order-index="2" type="entity">
+            <layout ax="700" ay="190" awidth="210" aheight="110" x="700" y="190" width="210" height="110" expanded="700,190,210,110" collapsed="0,0,0,0" rotation-center="45,45" />
+            <package name-in-body="false" />
+          </item>
+          <item id="di5031950942aa44cdb3f63ce3328eda418595" iid="95f85065829f48c0bc25ed28ffba42ed" container="9d849eb3eb104012a2586f41fceee148" container-iid="037c7617812145b6b606981cf7de3335" creation-date="06/29/2023 13:01:08" order-index="2" type="entity">
+            <layout ax="700" ay="360" awidth="210" aheight="110" x="700" y="360" width="210" height="110" expanded="700,360,210,110" collapsed="0,0,0,0" rotation-center="45,45" />
+            <package name-in-body="false" />
+          </item>
+          <item id="di5aa0f18af99446b08cd9a36c0715c2264975" iid="d58eda9816e6409aa8c4d53ec886bf34" container="9d849eb3eb104012a2586f41fceee148" container-iid="037c7617812145b6b606981cf7de3335" creation-date="06/29/2023 13:01:08" order-index="2" type="entity">
+            <layout ax="980" ay="340" awidth="440" aheight="140" x="980" y="340" width="440" height="140" expanded="980,340,440,140" collapsed="0,0,0,0" rotation-center="-41,30" />
+            <package name-in-body="false" />
+          </item>
+          <item id="di22cab7a1a45d43f7b81aa1bcabf131ae3857" iid="19623f2301a44d72baf7f548817e7f2d" container="di5aa0f18af99446b08cd9a36c0715c2264975" container-iid="d58eda9816e6409aa8c4d53ec886bf34" creation-date="06/29/2023 13:01:43" order-index="3" type="entity">
+            <layout ax="1280" ay="390" awidth="110" aheight="56" x="1250" y="370" width="110" height="90" expanded="1280,390,110,56" collapsed="0,0,0,0" rotation-center="54,55" />
+            <package name-in-body="false" />
+          </item>
+          <item id="di06d13ca0734f4430a66114ae71649a272328" iid="d147e13c37564d74accea19c24aaa4de" container="di5aa0f18af99446b08cd9a36c0715c2264975" container-iid="d58eda9816e6409aa8c4d53ec886bf34" creation-date="06/29/2023 13:01:43" order-index="3" type="entity">
+            <layout ax="1150" ay="390" awidth="98" aheight="56" x="1120" y="370" width="180" height="90" expanded="1150,390,98,56" collapsed="0,0,0,0" rotation-center="60,55" />
+            <package name-in-body="false" />
+          </item>
+          <item id="e26a34aa800f4a908a1c0fc3399fe478" iid="fa3b8112bc464a0ea960d681925720a8" container="di5aa0f18af99446b08cd9a36c0715c2264975" container-iid="d58eda9816e6409aa8c4d53ec886bf34" creation-date="06/29/2023 13:01:43" order-index="3" type="entity">
+            <layout ax="1020" ay="390" awidth="98" aheight="56" x="980" y="530" width="180" height="90" expanded="1020,390,98,56" collapsed="0,0,0,0" rotation-center="60,55" />
+            <package name-in-body="false" />
+          </item>
+          <item id="di217cebddc8984b3d86cb20c4412da7b79458" iid="353a4b6e89ee40a5a9d165e9ffdc9c9e" container="9d849eb3eb104012a2586f41fceee148" container-iid="037c7617812145b6b606981cf7de3335" creation-date="06/29/2023 13:01:08" order-index="2" type="entity">
+            <layout ax="980" ay="190" awidth="210" aheight="110" x="980" y="190" width="210" height="110" expanded="980,190,210,110" collapsed="0,0,0,0" rotation-center="45,45" />
+            <package name-in-body="false" />
+          </item>
+          <item id="639df2cf668d424497d5a272954188e7" iid="b8fefa9d2e9b4738ac5d6a81ecf43ad4" creation-date="06/29/2023 13:02:14" order-index="4" type="entity">
+            <layout ax="1600" ay="130" awidth="180" aheight="100" x="1600" y="130" width="180" height="100" expanded="1600,130,180,100" collapsed="0,0,0,0" rotation-center="60,50" />
+            <package name-in-body="false" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="entity-relationship" id="p6f72df604ca34bbd904bc9be4df6a671_811923118" name="EntityRelationshipDiagram1" order-index="3" overview-order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-382,-95" zoom="0.3">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>06/29/2023 13:19:45</creation-date>
+          <change-date>07/03/2023 12:10:09</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="0ba45109eaf847ab94dcc99f36675aa3" cid="ENT015" type="erd-entity" name="MeasuresDeclaration" creation-date="07/03/2023 10:49:17">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a1348816ecbde4a13b7639e4f03759c1d600" cid="EA042" name="MeasType" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 10:57:39" />
+              <attribute uid="ad0061ff4c20d4bdbb7ae16974ec08742262" cid="EA043" name="MeasName" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 10:49:58" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="di155bb7a5797145149a81a66a7a984e517798" cid="ENT011" type="erd-entity" name="ExtendedMeasures" creation-date="07/03/2023 09:43:51">
+            <entity description="" />
+            <attributes>
+              <attribute uid="acf3284fd2c0c4da3b9c37d293cc54e1b706" cid="EA040" name="ExpID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="true" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:45:25" />
+              <attribute uid="aaec5ee522a5040c58679b3b13f9fc4a5818" cid="EA038" name="MeasID" type="bigint unsigned (MySql.bigint unsigned)" type-id="bigint unsigned (MySql.bigint unsigned)" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:44:53" />
+              <attribute uid="a1b59b7a3aa944b19b015a3aaebc02f11242" cid="EA041" name="MeasType" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:52:17" />
+              <attribute uid="a441e1002f1a84d61a5cf701b5ff919de154" cid="EA039" name="Timestamp" type="DateTime" type-id="Uml.DateTime" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:45:02" />
+              <attribute uid="a89a53aed1d0d4a2c9c19d2a6f128d5d9773" cid="EA036" name="Value" type="mediumint" type-id="MySql.mediumint" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:44:30" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="di0472ba534fcf441db91dfbbc8096ec279697" cid="ENT008" type="erd-entity" name="RedoxStack" creation-date="06/29/2023 13:20:02">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6d44105c591f466d812fd15006b52313979" cid="EA022" name="BatID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:07" />
+              <attribute uid="ad5dbc79be802489a92b22163717051c5569" cid="EA023" name="ElectrolyteConcent" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:42:21" />
+              <attribute uid="adbac326b9ae74937a60158fb3c50120f697" cid="EA033" name="ElectrolyteType" type="enum" type-id="MySql.enum" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:42:34" />
+              <attribute uid="ab75071c71e634f63b5e5176be3d13184641" cid="EA034" name="ElectrolyteVol" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:39:40" />
+              <attribute uid="a10052a518caa45a684ca376e59efa788858" cid="EA035" name="MaxFlowRate" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:42:08" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="31eff767cc6747c9a665a0de2895a38c" cid="REL007" type="erd-relationship" creation-date="07/03/2023 12:09:27" from="dicbd65d8d417541d988f2bbe7ba4a4d3c8303" to="ad9c7268149741998b7ebb212937371e">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="0..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="" to-attribute="" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="di49c2fd441c1e4685b78769720d617e5e3626" cid="ENT006" type="erd-entity" name="LeadAcid" creation-date="06/29/2023 13:20:02">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6d44105c591f466d812fd15006b52313979" cid="EA022" name="BatID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:07" />
+              <attribute uid="ad5dbc79be802489a92b22163717051c5569" cid="EA023" name="Capacity" type="varchar" type-id="MySql.varchar" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:29" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="59cca13a0c4f4e52b33c4f7f533b9a84" cid="ENT004" type="erd-entity" name="Instructions" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:20:15">
+            <entity description="" />
+            <attributes>
+              <attribute uid="ad37de6f1ea2d4be194352ce95631f353931" cid="EA014" name="ProfID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="true" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:45:12" />
+              <attribute uid="adc82395f6a524d0abdacb24639657039255" cid="EA008" name="InstrID" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:44:19" />
+              <attribute uid="ad8bf8de029bc41a2ae90b9130cf69393518" cid="EA009" name="Mode" type="enum" type-id="MySql.enum" type-size="" foreign-key="false" primary-key="false" nullable="false" description="WAIT, CC, CV, CP" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:41:33">
+                <documentations>
+                  <doc id="c0b72b50435944a5b7df58519fcbe312">
+                    <text>
+                      <default>
+                        <style font-name="Verdana" font-size="12">
+                          <text>
+                            <solid-brush color="#FF000000" />
+                          </text>
+                        </style>
+                      </default>
+                      <styles />
+                      <content>
+                        <paragraph>
+                          <style numbering-type="None">
+                            <numbering name="" multi-level="false">
+                              <numbering-level type="None" level="0" format="{0}." />
+                            </numbering>
+                          </style>
+                          <p>
+                            <t>
+</t>
+                          </p>
+                        </paragraph>
+                      </content>
+                    </text>
+                  </doc>
+                </documentations>
+              </attribute>
+              <attribute uid="af50894fb61774b1fab8011e4c9384413430" cid="EA010" name="SetPoint" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:46:02" />
+              <attribute uid="a9c649611ffa74e88a299d32d5021a1ed238" cid="EA011" name="LimitType" type="enum" type-id="MySql.enum" type-size="" foreign-key="false" primary-key="false" nullable="false" description="TIME, VOLTAGE, CURRENT, POWER" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:42:13" />
+              <attribute uid="a99c5757d2c474e8a87ff9ac8c7ae50b7183" cid="EA012" name="LimitPoint" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:46:11" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edr53a6906c1fca4bd0a3f968a622302f40720">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="aef30cc0332d4167b30bf4fb027ada55" cid="ENT001" type="erd-entity" name="Experiment" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:19:57">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a791b85e975a64a3192b3ac2d7f2b0eb8982" cid="EA015" name="ExpID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:57:02" />
+              <attribute uid="ae454c2b0eda74df7b95c9209c8c875685" cid="EA016" name="Name" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:51:47" />
+              <attribute uid="a3b746f24fc4640ac8bcae7d048bf72a4511" cid="EA017" name="Description" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:51:47" />
+              <attribute uid="ac186cc4dc5484562b00f05805e6a3b57464" cid="EA018" name="DataCreation" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:57:03" />
+              <attribute uid="a47fa63a559af4280bcf780ac5dcf7606464" cid="EA019" name="DateBegin" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:57:03" />
+              <attribute uid="a5700c5a6888d4f41a3a85f5789a40cb7464" cid="EA020" name="DateFinish" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:57:03" />
+              <attribute uid="a96bf9c86367f453b94455e9fbd9f8351464" cid="EA021" name="Status" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 08:57:03" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edre01eddbfc90242d092f4886a0a3cc92c504">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="11f04d3123b149aa8f709e234d454d81" cid="REL003" type="erd-relationship" creation-date="07/03/2023 08:40:53" from="a462ad5aa6cf4bf4bad6d937575ade97" to="59cca13a0c4f4e52b33c4f7f533b9a84">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="1..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="a523b9dd9da904a9296bb998e220c83d7665" to-attribute="" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="di580561472c214de2b5db5c8794ad05ce3330" cid="ENT014" type="erd-entity" name="ComputationalUnit" creation-date="07/03/2023 09:52:44">
+            <entity description="" />
+            <attributes>
+              <attribute uid="abc5f749b97d14d4897f098f7dc94baa3787" cid="EA048" name="CUID" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="a85c68bc41d954e40a480fb384a0c9822787" cid="EA050" name="Description" type="varchar (MySql.varchar)" type-id="varchar (MySql.varchar)" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="a36c16e3089834ab190e6694235c160b9787" cid="EA051" name="IP" type="varchar (MySql.varchar)" type-id="varchar (MySql.varchar)" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="a98e52ebb42fd4cb6ab6a2a1bda9a2cc1787" cid="EA052" name="Port" type="smallint" type-id="MySql.smallint" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="aed435feb7f764eb783676963eb6968d6787" cid="EA053" name="User" type="varchar" type-id="MySql.varchar" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="aa23b3015fbf4491cb101e278ad5f91be787" cid="EA054" name="Pass" type="varchar" type-id="MySql.varchar" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:19" />
+              <attribute uid="a03afc9a2b7274e5db7e9f1770ca51e05880" cid="EA055" name="LastConection" type="timestamp" type-id="MySql.timestamp" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:18:37" />
+              <attribute uid="a22a9d73c03dd4f2ab3301bfb4a2a31ef786" cid="EA056" name="Enable" type="boolean" type-id="MySql.boolean" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:35:58" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edr1f672f1b5f654a959a551bbda6d0cf21983">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="8dd54755eac74ae19433c0f3ff0cfd3c" cid="ENT009" type="erd-entity" name="GenericMeasures" creation-date="07/03/2023 09:43:51">
+            <entity description="" />
+            <attributes>
+              <attribute uid="acf3284fd2c0c4da3b9c37d293cc54e1b706" cid="EA040" name="ExpID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="true" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:45:25" />
+              <attribute uid="aaec5ee522a5040c58679b3b13f9fc4a5818" cid="EA038" name="MeasID" type="bigint unsigned (MySql.bigint unsigned)" type-id="bigint unsigned (MySql.bigint unsigned)" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:44:53" />
+              <attribute uid="a441e1002f1a84d61a5cf701b5ff919de154" cid="EA039" name="Timestamp" type="DateTime" type-id="Uml.DateTime" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:45:02" />
+              <attribute uid="a89a53aed1d0d4a2c9c19d2a6f128d5d9773" cid="EA036" name="Voltage" type="mediumint" type-id="MySql.mediumint" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:44:30" />
+              <attribute uid="a77c4f9a6033541b8901f8d72c6fb4357642" cid="EA037" name="Current" type="mediumint" type-id="MySql.mediumint" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:44:49" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edr46aacabb819b4034a1caeaec46e92fae311">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="dicbd65d8d417541d988f2bbe7ba4a4d3c8303" cid="ENT013" type="erd-entity" name="ComptaibleDevices" creation-date="07/03/2023 09:52:44">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a53ef465603a74faabc942d5d26fabea4193" cid="EA044" name="CompDevID" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:15:30" />
+              <attribute uid="a1560457ca3cd4b5aa07a5b47e86a945d193" cid="EA045" name="Name" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:15:30" />
+              <attribute uid="a4ef7c8f4171b451f9f28f729a705a4df193" cid="EA046" name="Manufacturer" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:15:30" />
+              <attribute uid="a2b281f28a52643bea8842114b8a8238a193" cid="EA047" name="DeviceType" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:15:30" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edrc0ba4ab81ec34352889339dff9c22bfa23">
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="bdc54ab81c0841dfa7c4843f184bd3b0" cid="REL008" type="erd-relationship" creation-date="07/03/2023 12:10:09" from="da9f2087a220422eb6565c87f327e05a" to="ad9c7268149741998b7ebb212937371e">
+            <erd-relation type="Identifying" multiplicity-from="1..*" multiplicity-to="1..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="" to-attribute="a7638ca11cf874f9486534f5568e7b578426" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="c816030559e24057b58f9bf4cac022e8" cid="REL004" type="erd-relationship" creation-date="07/03/2023 11:50:41" from="da9f2087a220422eb6565c87f327e05a" to="di580561472c214de2b5db5c8794ad05ce3330">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="1">
+              <attribute-pairs>
+                <attribute-pair from-attribute="a4b856d631a254aac9939ba7f78ea9e8c635" to-attribute="" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="e3739b3514a2465e98248e42f88f2045" cid="ENT002" type="erd-entity" name="Baterry" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:20:02">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6d44105c591f466d812fd15006b52313979" cid="EA022" name="BatID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:07" />
+              <attribute uid="a4aad28866903464d9981df9ce1aca8ad466" cid="EA030" name="Manufacturer" type="varchar" type-id="MySql.varchar" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:35:36" />
+              <attribute uid="a82d8ff530d6a4389be4801a664386559649" cid="EA031" name="Model" type="varchar" type-id="MySql.varchar" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:35:25" />
+              <attribute uid="a7b491bdbd1ba49218eaed2f690f05409560" cid="EA032" name="FabDate" type="date" type-id="MySql.date" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:34:52" />
+              <attribute uid="ad5dbc79be802489a92b22163717051c5569" cid="EA023" name="Name" type="varchar" type-id="MySql.varchar" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:29" />
+              <attribute uid="a734c4d78482c4b96ab59a9a1eedb2ed7307" cid="EA024" name="CellsNum" type="mediumint" type-id="MySql.mediumint" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:29:10" />
+              <attribute uid="a55a9754a4f2c4787bd937f336984c9fd18" cid="EA025" name="BatteryType" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:30:41" />
+              <attribute uid="a44ea7079add4424aa05fb0bc5ec1286a41" cid="EA026" name="VoltMin" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:29:40" />
+              <attribute uid="a4dcdaabd64104a908d3e10ba4f9ee95e918" cid="EA027" name="VoltMax" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:29:50" />
+              <attribute uid="ae1a0b02a7ec143389c77cd7d15535a29341" cid="EA028" name="CurrMin" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:30:32" />
+              <attribute uid="ab3901230171d46a1b8e6458996241b4d966" cid="EA029" name="CurrMax" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:30:39" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="di231c7a5f20934638a428ecf4487dfcae9271" cid="ENT007" type="erd-entity" name="RedoxStack" creation-date="06/29/2023 13:20:02">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6d44105c591f466d812fd15006b52313979" cid="EA022" name="BatID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:07" />
+              <attribute uid="ad5dbc79be802489a92b22163717051c5569" cid="EA023" name="ElectrodeSize" type="mediumint unsigned" type-id="MySql.mediumint unsigned" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:39:50" />
+              <attribute uid="adbac326b9ae74937a60158fb3c50120f697" cid="EA033" name="ElectrodeComposition" type="varchar" type-id="MySql.varchar" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:41:21" />
+              <attribute uid="ab75071c71e634f63b5e5176be3d13184641" cid="EA034" name="BipolarType" type="enum" type-id="MySql.enum" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:39:40" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="a462ad5aa6cf4bf4bad6d937575ade97" cid="ENT003" type="erd-entity" name="Profile" creator="CDoZfQE0eoPT0twKUywpA6bcSVmND/ES1wvVTUIWqr7nDuuw" creation-date="06/29/2023 13:20:10">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a523b9dd9da904a9296bb998e220c83d7665" cid="EA001" name="ProID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="true" creation-date="06/29/2023 13:21:13" />
+              <attribute uid="aaa33f409a5c54c868114a06d04e39216845" cid="EA002" name="Name" type="varchar" type-id="MySql.varchar" type-size="40" foreign-key="false" primary-key="false" nullable="false" description="Profile name" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:24:28" />
+              <attribute uid="a2d0b0ab1e52f40fd91d247ba3263e812389" cid="EA003" name="ServerFilePath" type="varchar" type-id="MySql.varchar" type-size="120" foreign-key="false" primary-key="false" nullable="false" description="Path to the fille which store the instructions of the profile" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:25:22" />
+              <attribute uid="a15872ba7d76d40acb27535b1fe8f498e213" cid="EA004" name="VoltMax" type="int" type-id="MySql.int" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:27:11" />
+              <attribute uid="ada452ecd563d4decb99861a163e99b0a320" cid="EA005" name="VoltMin" type="int" type-id="MySql.int" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:27:23" />
+              <attribute uid="ad153d32bd20b4b1594978c18679f7bfd756" cid="EA006" name="CurrMax" type="int" type-id="MySql.int" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:27:33" />
+              <attribute uid="a95c7e23c19444ae0a8730e3d363b82e2934" cid="EA007" name="CurrMin" type="int" type-id="MySql.int" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="06/29/2023 13:27:41" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edr3c15461d28c64508914c0b7fc7a89017223">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="ad9c7268149741998b7ebb212937371e" cid="ENT016" type="erd-entity" name="UsedDevices" creation-date="07/03/2023 11:41:00">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a43e4a7317a9e41948b41dcdb7dddcb1a179" cid="EA069" name="SCID" type="" type-id="" type-size="" foreign-key="true" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 12:08:06" />
+              <attribute uid="ad90194f323154653b9c6ec651267e951834" cid="EA059" name="DevID" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:45:16" />
+              <attribute uid="a7638ca11cf874f9486534f5568e7b578426" cid="EA060" name="CompDevID" type="" type-id="" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:44:46" />
+              <attribute uid="aa11319751a1f40b8821cefcf6353bfad497" cid="EA061" name="SN" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:45:03" />
+              <attribute uid="a33510c12ade849179118aa8c6de05585764" cid="EA062" name="LastUsage" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:45:16" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edr875bf5056cea45f995f28f2a7b4fdabb890">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+          <item id="dibf4df50c1c504ad88b635030761056ca1757" cid="ENT005" type="erd-entity" name="Lithium" creation-date="06/29/2023 13:20:02">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6d44105c591f466d812fd15006b52313979" cid="EA022" name="BatID" type="bigint unsigned" type-id="MySql.bigint unsigned" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:07" />
+              <attribute uid="ad5dbc79be802489a92b22163717051c5569" cid="EA023" name="Capacity" type="varchar" type-id="MySql.varchar" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 09:28:29" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="da9f2087a220422eb6565c87f327e05a" cid="ENT012" type="erd-entity" name="StationConfig" creation-date="07/03/2023 09:52:44">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a6819ab75310c4f3faf196df0d0249c4e99" cid="EA057" name="SCID" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:39:09" />
+              <attribute uid="a4b856d631a254aac9939ba7f78ea9e8c635" cid="EA058" name="CUID" type="" type-id="" type-size="" foreign-key="true" primary-key="true" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:39:23" />
+              <attribute uid="a9a8de34fef534472b3c215164d438faa914" cid="EA064" name="Name" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:46:48" />
+              <attribute uid="a3af7cba2f8594addb53d26993a929845579" cid="EA065" name="Localization" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:47:04" />
+              <attribute uid="a84919ad2713d405abbfdb7e04b2d8e6e579" cid="EA066" name="RegisterDate" type="" type-id="" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" default-value-name="" auto-increment="false" creation-date="07/03/2023 11:47:04" />
+            </attributes>
+            <indexes />
+            <entity-data>
+              <row uid="edrd5c6abd35ce747378c9a458294404116567">
+                <v />
+                <v />
+                <v />
+                <v />
+                <v />
+              </row>
+            </entity-data>
+          </item>
+        </abstract-items>
+        <layer id="f17cf1ff5c2a4a7fa53384f6429ee97c" name="Default" visible="true" enabled="true" locked="false">
+          <item id="aef30cc0332d4167b30bf4fb027ada55" iid="ac40179a8c76451092a016fe9f97510b" creation-date="06/29/2023 13:19:57" order-index="0" type="entity">
+            <layout ax="240" ay="360" awidth="490" aheight="190" x="240" y="360" width="490" height="190" rotation-center="-5,-15" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="e3739b3514a2465e98248e42f88f2045" iid="381fd7112515422f970032b63b228693" creation-date="06/29/2023 13:20:02" order-index="1" type="entity">
+            <layout ax="-420" ay="360" awidth="306" aheight="256" x="-420" y="360" width="340" height="190" rotation-center="-100,-15" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="a462ad5aa6cf4bf4bad6d937575ade97" iid="2fdf46347fb64b608e20145bfca012a6" creation-date="06/29/2023 13:20:10" order-index="2" type="entity">
+            <layout ax="1200" ay="360" awidth="510" aheight="190" x="1208" y="360" width="510" height="190" rotation-center="-185,-5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="59cca13a0c4f4e52b33c4f7f533b9a84" iid="c1e6507a04934927a853d53f835b1b35" creation-date="06/29/2023 13:20:15" order-index="3" type="entity">
+            <layout ax="1930" ay="390" awidth="400" aheight="180" x="1930" y="390" width="400" height="180" rotation-center="-122.5,0.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="8dc2424f10f24bdcb30354d50d87f841" iid="40cecb6006844d488de6f4a0e9884f57" creation-date="06/29/2023 13:25:51" order-index="5" type="entity">
+            <layout ax="1370" ay="620" awidth="175" aheight="50" x="1370" y="620" width="175" height="50" rotation-center="-17.5,25" />
+          </item>
+          <item id="dicd9cd37ed03441b48c75abd6bac0aef44918" iid="9d253f7278cf47ad9deac86b94fec75f" creation-date="06/29/2023 13:25:51" order-index="6" type="comment-connector">
+            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="1458" y1="620" x2="1456" y2="550" start-border-pos="0.125150320870536" end-border-pos="0.624264705882353" name-position="0,20">
+              <points>
+                <point x="1458" y="620" />
+                <point x="1456" y="550" />
+              </points>
+            </layout>
+            <relation from="8dc2424f10f24bdcb30354d50d87f841" from-iid="40cecb6006844d488de6f4a0e9884f57" to="a462ad5aa6cf4bf4bad6d937575ade97" to-iid="2fdf46347fb64b608e20145bfca012a6" />
+          </item>
+          <item id="11f04d3123b149aa8f709e234d454d81" iid="4de4bef067d1453cb29b646b74699539" creation-date="07/03/2023 08:40:53" order-index="7" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="rounded-rectangular" lock-end-point="true" lock-to-fields="true" auto-path="" x1="1710" y1="400" x2="1930" y2="479" start-border-pos="0.303289473684211" end-border-pos="0.875776395201683" start-local-pos="40" end-local-pos="80" name-position="0,20">
+              <points>
+                <point x="1710" y="400" />
+                <point x="1930" y="479" />
+              </points>
+            </layout>
+            <relation from="a462ad5aa6cf4bf4bad6d937575ade97" from-iid="2fdf46347fb64b608e20145bfca012a6" from-field="a523b9dd9da904a9296bb998e220c83d7665" to="59cca13a0c4f4e52b33c4f7f533b9a84" to-iid="c1e6507a04934927a853d53f835b1b35" />
+          </item>
+          <item id="dibf4df50c1c504ad88b635030761056ca1757" iid="e6153c64f33d4c0ba8630d83af87caae" creation-date="06/29/2023 13:20:02" order-index="1" type="entity">
+            <layout ax="-1020" ay="720" awidth="340" aheight="90" x="-1020" y="720" width="340" height="90" rotation-center="-100,39.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="di49c2fd441c1e4685b78769720d617e5e3626" iid="2c95ae14d10a480ab24767c0028fc4dc" creation-date="06/29/2023 13:20:02" order-index="1" type="entity">
+            <layout ax="-700" ay="870" awidth="340" aheight="90" x="-700" y="870" width="340" height="90" rotation-center="-100,39.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="di231c7a5f20934638a428ecf4487dfcae9271" iid="54c9761e8a8c4859ab8cc134da1a34df" creation-date="06/29/2023 13:20:02" order-index="1" type="entity">
+            <layout ax="-260" ay="750" awidth="340" aheight="123" x="-260" y="750" width="340" height="90" rotation-center="-100,39.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="di0472ba534fcf441db91dfbbc8096ec279697" iid="b830ddd92e664e5b9a3d307bb4e60644" creation-date="06/29/2023 13:20:02" order-index="1" type="entity">
+            <layout ax="-260" ay="980" awidth="360" aheight="130" x="-260" y="980" width="360" height="130" rotation-center="-112,54.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="8dd54755eac74ae19433c0f3ff0cfd3c" iid="73d2f10434664eb29211340b794593fb" creation-date="07/03/2023 09:43:51" order-index="8" type="entity">
+            <layout ax="970" ay="810" awidth="420" aheight="150" x="973" y="810" width="420" height="150" rotation-center="-140,30.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="di155bb7a5797145149a81a66a7a984e517798" iid="35f65ab5bf2a408bb19029f2982320d8" creation-date="07/03/2023 09:43:51" order-index="8" type="entity">
+            <layout ax="1560" ay="810" awidth="420" aheight="150" x="1560" y="810" width="420" height="150" rotation-center="-140,15" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="da9f2087a220422eb6565c87f327e05a" iid="766b1e86f5fc4ffb8053b4d53de7b0aa" creation-date="07/03/2023 09:52:44" order-index="9" type="entity">
+            <layout ax="430" ay="1290" awidth="480" aheight="150" x="430" y="1290" width="480" height="150" rotation-center="-170,13.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="dicbd65d8d417541d988f2bbe7ba4a4d3c8303" iid="7ab20cf083e44298beef586f6d0a488f" creation-date="07/03/2023 09:52:44" order-index="9" type="entity">
+            <layout ax="1430" ay="1460" awidth="480" aheight="140" x="1430" y="1460" width="480" height="140" rotation-center="-296,-3" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="di580561472c214de2b5db5c8794ad05ce3330" iid="a41abec9df014ace82fef7f951df68d8" creation-date="07/03/2023 09:52:44" order-index="9" type="entity">
+            <layout ax="80" ay="1540" awidth="490" aheight="210" x="80" y="1540" width="490" height="210" rotation-center="-175,-25" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="0ba45109eaf847ab94dcc99f36675aa3" iid="38fd878ce58843208e21d96b1fb6f8d7" creation-date="07/03/2023 10:49:17" order-index="10" type="entity">
+            <layout ax="1980" ay="1100" awidth="349" aheight="100" x="1988" y="1101" width="310" height="100" rotation-center="-85,30" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="ad9c7268149741998b7ebb212937371e" iid="8b00cc3aa344494987d279ee20df1498" creation-date="07/03/2023 11:41:00" order-index="11" type="entity">
+            <layout ax="1420" ay="1170" awidth="460" aheight="160" x="1420" y="1170" width="460" height="160" rotation-center="-141.5,0" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="c816030559e24057b58f9bf4cac022e8" iid="5c170014700349e381d91e561be04fee" creation-date="07/03/2023 11:50:41" order-index="14" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="rounded-rectangular" lock-end-point="true" lock-to-fields="true" auto-path="" x1="430" y1="1350" x2="320" y2="1540" start-border-pos="0.900833333333333" end-border-pos="0.627551020408163" start-local-pos="60" end-local-pos="245" name-position="0,20">
+              <points>
+                <point x="430" y="1350" />
+                <point x="320" y="1360" />
+                <point x="320" y="1540" />
+              </points>
+            </layout>
+            <relation from="da9f2087a220422eb6565c87f327e05a" from-iid="766b1e86f5fc4ffb8053b4d53de7b0aa" from-field="a4b856d631a254aac9939ba7f78ea9e8c635" to="di580561472c214de2b5db5c8794ad05ce3330" to-iid="a41abec9df014ace82fef7f951df68d8" />
+          </item>
+          <item id="31eff767cc6747c9a665a0de2895a38c" iid="3c3caf1a0caa4c5b9ce3196eaf7cd220" creation-date="07/03/2023 12:09:27" order-index="15" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1670" y1="1460" x2="1650" y2="1330" start-border-pos="0.125" end-border-pos="0.625" start-local-pos="220" end-local-pos="230" name-position="0,20">
+              <points>
+                <point x="1670" y="1460" />
+                <point x="1650" y="1330" />
+              </points>
+            </layout>
+            <relation from="dicbd65d8d417541d988f2bbe7ba4a4d3c8303" from-iid="7ab20cf083e44298beef586f6d0a488f" to="ad9c7268149741998b7ebb212937371e" to-iid="8b00cc3aa344494987d279ee20df1498" />
+          </item>
+          <item id="bdc54ab81c0841dfa7c4843f184bd3b0" iid="5edb57d10cc44e949de9217135d736e3" creation-date="07/03/2023 12:10:09" order-index="16" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="910" y1="1365" x2="1420" y2="1248" start-border-pos="0.375" end-border-pos="0.87734375" start-local-pos="90" end-local-pos="78" name-position="0,20">
+              <points>
+                <point x="910" y="1365" />
+                <point x="1420" y="1248" />
+              </points>
+            </layout>
+            <relation from="da9f2087a220422eb6565c87f327e05a" from-iid="766b1e86f5fc4ffb8053b4d53de7b0aa" to="ad9c7268149741998b7ebb212937371e" to-iid="8b00cc3aa344494987d279ee20df1498" to-field="a7638ca11cf874f9486534f5568e7b578426" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
