@@ -3,11 +3,6 @@
 
 ### Project specific ###
 # Project specific 
-APP/*
-DRV/*
-SYS/*
-MID/*
-APP/*
 config.*
 *.ini
 *.cred.*
