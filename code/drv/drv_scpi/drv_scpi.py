@@ -11,13 +11,14 @@ import sys, os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from SYS.SYS_LOG import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./SYS/SYS_LOG/logginConfig.conf')
+    cycler_logger = SYS_LOG_Logger_c('./sys/sys_log/logginConfig.conf')
 log = SYS_LOG_LoggerGetModuleLogger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
+from typing import List
 import serial
 
 #######################       THIRD PARTY IMPORTS        #######################
@@ -29,7 +30,7 @@ import serial
 
 
 #######################              ENUMS               #######################
-class _Default_Serial_Params_c():
+class _DefaultSerialParamsC():
     "Communication constants"
     BAUD_RATE           = 115200
     BYTESIZE            = serial.EIGHTBITS
@@ -41,43 +42,53 @@ class _Default_Serial_Params_c():
     MAX_LEN_IN_BYTES    = 21
 
 #######################             CLASSES              #######################
-class DRV_SCPI_Error_c():
-    def __init__(self, message: str, errorCode: int) -> None:
+class DrvScpiErrorC():
+    '''Error class for SCPI driver.
+    '''
+    def __init__(self, message: str, error_code: int) -> None:
         self.message    = message
-        self.error_code  = errorCode
+        self.error_code  = error_code
 
     def __str__(self) -> str:
         return f"Error: {self.message} \t Code: {self.error_code}"
 
 
-class DRV_SCPI_Handler_c():
-    def __init__(self, port: str, separator: str, baudrate: int = _Default_Serial_Params_c.BAUD_RATE, bytesize = _Default_Serial_Params_c.BYTESIZE,
-                 parity = _Default_Serial_Params_c.PARITY, stopbits = _Default_Serial_Params_c.STOP_BITS, timeout = _Default_Serial_Params_c.READ_TIMEOUT,
-                 write_timeout = _Default_Serial_Params_c.WRITE_TIMEOUT, inter_byte_timeout = _Default_Serial_Params_c.INTER_BYTE_TIMEOUT) -> None:
+class DrvScpiHandlerC():
+    '''Driver for SCPI devices.
+    '''
+    def __init__(self, port: str, separator: str, baudrate: int = _DefaultSerialParamsC.BAUD_RATE, bytesize = _DefaultSerialParamsC.BYTESIZE,
+                 parity = _DefaultSerialParamsC.PARITY, stopbits = _DefaultSerialParamsC.STOP_BITS, timeout = _DefaultSerialParamsC.READ_TIMEOUT,
+                 write_timeout = _DefaultSerialParamsC.WRITE_TIMEOUT, inter_byte_timeout = _DefaultSerialParamsC.INTER_BYTE_TIMEOUT) -> None:
          
         self.__serial: serial.Serial = serial.Serial(port = port, baudrate = baudrate, bytesize = bytesize, parity = parity, stopbits = stopbits,
                                                      timeout = timeout, write_timeout = write_timeout, inter_byte_timeout = inter_byte_timeout)
         self.__separator: str = separator
 
 
-    def decodeStr2Numbers(self, data: str) -> int:
-        '''Decode str to integers.
+    def decode_numbers(self, data: bytes) -> List[int]:
+        '''Decode bytes to integers.
         Args:
-            data (str): [description]
+            - data (bytes): Value to decode
         Returns:
-            int: [description]
+            - msg_decode (List[int]): Message decoded.
         Raises:
-            - None
+            - DrvScpiErrorC: Error decoding data.
         '''
-        pass
+        data = data.decode('utf-8')
+        msg_decode = data.split(f"{self.__separator}")
+        try:
+            msg_decode = [int(i) for i in msg_decode]
+        except ValueError:
+            raise DrvScpiErrorC(message = "Error decoding data", error_code = 2)
+        return msg_decode
 
 
-    def decodeAndSplit(self, data: bytes) -> list:
+    def decode_and_split(self, data: bytes) -> List[str]:
         '''Decode str to integers and split the data.
         Args:
             data (bytes): Value to decode and split.
         Returns:
-            msg_decode (list): Message decoded and splited.
+            msg_decode (List[str]): Message decoded and splited.
         Raises:
             - None
         '''
@@ -86,21 +97,23 @@ class DRV_SCPI_Handler_c():
         return msg_decode
 
 
-    def readDeviceInfo(self) -> list:
+    def read_device_info(self) -> List[str]:
         '''Reads the list of device information.
         Args:
             - None
         Returns:
-            - msg (list): List of device information.
+            - msg (List[str]): List of device information.
         Raises:
-            - None
+            - DrvScpiErrorC: Error decoding data.
         '''
+        msg = self.send_and_read('*IDN?')
+        if len(msg) == 0:
+            raise DrvScpiErrorC(message = "Error reading device information", error_code = 1)
+        else:
+            return msg
 
-        msg = self.sendAndRead('*IDN?')
-        return msg
 
-
-    def sendMsg(self, msg:str) -> None:
+    def send_msg(self, msg:str) -> None:
         '''Send a message to the serial device.
         Args:
             - msg (str): Message to send.
@@ -113,32 +126,32 @@ class DRV_SCPI_Handler_c():
         self.__serial.write(bytes(msg.encode('utf-8')))
 
 
-    def receiveMsg(self) -> list:
+    def receive_msg(self) -> List[str]:
         '''
         Receive a message from the serial port in blocking mode.
         Args:
             - None
         Returns:
-            - msg_decoded (str): Received message.
+            - msg_decoded (List[str]): Received message.
         Raises:
             - None
         '''
         msg = self.__serial.read_until(self.__separator)
-        msg_decoded = self.decodeAndSplit(msg)
+        msg_decoded = self.decode_and_split(msg)
         return msg_decoded
 
 
-    def sendAndRead(self, msg: str) -> list:
+    def send_and_read(self, msg: str) -> List[str]:
         '''Send a message to the serial device and read the response.
         Args:
             - msg (str): Message to send.
         Returns:
-            - msg (str): Received message.
+            - msg (List[str]): Received message.
         Raises:
             - None
         '''
-        self.sendMsg(msg)
-        response: list = self.receiveMsg()
+        self.send_msg(msg)
+        response: list = self.receive_msg()
         return response
 
 

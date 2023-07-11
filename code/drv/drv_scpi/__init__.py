@@ -1,4 +1,4 @@
-from .drv_scpi import DRV_SCPI_Handler_c, DRV_SCPI_Error_c
+from .drv_scpi import DrvScpiHandlerC, DrvScpiErrorC
 
 
 

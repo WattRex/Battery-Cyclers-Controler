@@ -11,19 +11,19 @@ import sys, os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from SYS.SYS_LOG import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./SYS/SYS_LOG/logginConfig.conf')
+    cycler_logger = SYS_LOG_Logger_c('./sys/sys_log/logginConfig.conf')
 log = SYS_LOG_LoggerGetModuleLogger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
-from consolemenu import Screen
+
 
 #######################       THIRD PARTY IMPORTS        #######################
 
 #######################          MODULE IMPORTS          #######################
-from DRV.DRV_SCPI import DRV_SCPI_Handler_c
+from drv.drv_scpi import DrvScpiHandlerC, DrvScpiErrorC
 
 #######################          PROJECT IMPORTS         #######################
 
@@ -33,41 +33,38 @@ from DRV.DRV_SCPI import DRV_SCPI_Handler_c
 #######################              CLASSES             #######################
 
 def main():
-    Screen.clear() #TODO: quitarlo de aqui y del import
-
-    multimeter = DRV_SCPI_Handler_c(port='/dev/ttyUSB0', separator='\n', baudrate = 38400)
+    multimeter = DrvScpiHandlerC(port='/dev/ttyUSB0', separator='\n', baudrate = 38400)
     print(f"multimeter")
-    # multimeter.sendMsg('VOLT:DC:NPLC 1')
-    # multimeter.sendMsg('FETCH?')
-    # multimeter.receiveMsg()
-    # multimeter.sendAndRead('FETCH?')
-    print(multimeter.readDeviceInfo())
+    # multimeter.send_msg('VOLT:DC:NPLC 1')
+    # multimeter.send_msg('FETCH?')
+    # multimeter.receive_msg()
+    # multimeter.send_and_read('FETCH?')
+    print(multimeter.read_device_info())
     print('\n')
     
     
-    source = DRV_SCPI_Handler_c(port = '/dev/ttyACM0', separator = '\n', baudrate = 9600)
+    source = DrvScpiHandlerC(port = '/dev/ttyACM0', separator = '\n', baudrate = 9600)
     print(f"source")
-    # source.sendMsg('SYSTem:LOCK: ON')
-    # time.sleep(3)
-    # source.sendMsg('SYSTem:LOCK: OFF')
-    # source.sendAndRead('MEASure:VOLTage?')
-    print(source.readDeviceInfo())
+    # source.send_msg('SYSTem:LOCK: ON')
+    # source.send_msg('SYSTem:LOCK: OFF')
+    # source.send_and_read('MEASure:VOLTage?')
+    print(source.read_device_info())
 
 
 if __name__ == '__main__':
     main()
 
 
-########## DICCIONARIO COMANDOS ##########
+########## EXAMPLE COMMAND DICTIONARY ##########
 '''
-MULTIMETRO
-- Ponerlo a valor medio: 'VOLT:DC:NPLC 1'
-- Ponerlo a valor slow: 'VOLT:DC:NPLC 10'
-- Ponerlo a valor fast: 'VOLT:DC:NPLC 0.1'
+MULTIMETER
+- Send medium value: 'VOLT:DC:NPLC 1'
+- Send slow value: 'VOLT:DC:NPLC 10'
+- Send fast value: 'VOLT:DC:NPLC 0.1'
 
-FUENTE
+SOURCE
 - LOCK ON:  'SYSTem:LOCK: ON'
 - LOCK OFF: 'SYSTem:LOCK: OFF'
-- MEDIR voltaje: 'MEASure:VOLTage?'
-- MEDIR corriente: 'MEASure:CURRent?'
+- Voltaje measure: 'MEASure:VOLTage?'
+- Corriente measure: 'MEASure:CURRent?'
 '''
