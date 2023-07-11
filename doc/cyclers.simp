@@ -29,7 +29,7 @@
       </counter>
       <counter>
         <item-type type-id="class" type="Class" />
-        <value>39</value>
+        <value>40</value>
       </counter>
       <counter>
         <item-type type-id="data-type" type="Data Type" />
@@ -99,11 +99,11 @@
       </counter>
       <counter>
         <item-type type-id="relationship" type="Association" />
-        <value>88</value>
+        <value>93</value>
       </counter>
       <counter>
         <item-type type-id="property" type="Property" />
-        <value>345</value>
+        <value>364</value>
       </counter>
       <counter>
         <item-type type-id="drawing-polygon-path" type="Polygon Path" />
@@ -111,7 +111,7 @@
       </counter>
       <counter>
         <item-type type-id="class" type="Class" />
-        <value>113</value>
+        <value>114</value>
       </counter>
       <counter>
         <item-type type-id="data-type" type="Data Type" />
@@ -224,6 +224,8 @@
         <type id="Class:di1342d2f72c86487ea91a8aeaebecc9fb8518" name="DRV_RS_Data_c" class-ref="di1342d2f72c86487ea91a8aeaebecc9fb8518" />
         <type id="Class:ffc1f665ed3b457bb4539c7af334cb8f" name="MID_DATA_Dev_Status_e" class-ref="ffc1f665ed3b457bb4539c7af334cb8f" />
         <type id="Uml.Object" name="Uml.Object" />
+        <type id="Class:dic4db15b003a148eaa102155ce35cf0985698" name="DrvPwrStatusE" class-ref="dic4db15b003a148eaa102155ce35cf0985698" />
+        <type id="Class:di116f34e82bb64559a9aeedceecd72ab15430" name="DRV_PWR_Measures_c" class-ref="di116f34e82bb64559a9aeedceecd72ab15430" />
         <type id="Class:7c2f00d624f24accbefcdd7cf14edb5f" name="Class14" class-ref="7c2f00d624f24accbefcdd7cf14edb5f" />
         <type id="Class:di1a419738c9834c7b93d45bf84e2ed5a48518" name="DRV_RS_Device_c" class-ref="di1a419738c9834c7b93d45bf84e2ed5a48518" />
         <type id="Boolean" name="Boolean" />
@@ -235,12 +237,14 @@
         <type id="int (MySql.int)" name="int (MySql.int)" />
         <type id="Class:di903bdc66973343d1b31dde5c914d985e2312" name="DRV_RS" class-ref="di903bdc66973343d1b31dde5c914d985e2312" />
         <type id="Class:303be3cbe0f84a89b09017784c714ccd" name="DRV_EPC_Mode_e" class-ref="303be3cbe0f84a89b09017784c714ccd" />
+        <type id="Class:di3f1173a556014bcb8a71995de064eadc7850" name="DrvPwrPropertiesC" class-ref="di3f1173a556014bcb8a71995de064eadc7850" />
         <type id="Class:di552ff51f0de44c8d9e5d8d894ba0a7fe5430" name="DRV_EA_Properties_C" class-ref="di552ff51f0de44c8d9e5d8d894ba0a7fe5430" />
         <type id="Class:005965939887431b9fcc80dd67a0cb41" name="DRV_EA" class-ref="005965939887431b9fcc80dd67a0cb41" />
         <type id="Class:di2da58ea8b94c43ab99727451727631633088" name="DRV_BK_Data_c" class-ref="di2da58ea8b94c43ab99727451727631633088" />
         <type id="Class:dib0bc4449d4b74846a2fc3fa4f41d84b16610" name="DRV_BMS" class-ref="dib0bc4449d4b74846a2fc3fa4f41d84b16610" />
         <type id="Class:did80a11c9827f482782cdebdac7e4c9392879" name="MID_STR" class-ref="did80a11c9827f482782cdebdac7e4c9392879" />
         <type id="DateTime" name="DateTime" />
+        <type id="Class:di981e1e5fd82846428d6da112ab4c531e7850" name="DrvPwrDeviceC" class-ref="di981e1e5fd82846428d6da112ab4c531e7850" />
         <type id="Class:diee78cf31ab074dbb86d34a1b34c7d40a6530" name="DRV_EA_Measures_c" class-ref="diee78cf31ab074dbb86d34a1b34c7d40a6530" />
         <type id="Class:di5f22ada1c49d4c77b57e002ea4c8490c3366" name="DrvScpiHandlerC" class-ref="di5f22ada1c49d4c77b57e002ea4c8490c3366" />
         <type id="Class:6bffc31616834617a816b51af2a23838" name="DRV_BK_Device_c" class-ref="6bffc31616834617a816b51af2a23838" />
@@ -252,7 +256,7 @@
         <type id="varchar (MySql.varchar)" name="varchar (MySql.varchar)" />
         <type id="Class:di39e105aacabc4bba9c2dfe17b9ab92965851" name="DRV_CAN" class-ref="di39e105aacabc4bba9c2dfe17b9ab92965851" />
         <type id="Class:di9a2c1ed3d52b43d4be4977c5413ee99b7850" name="DRV_PWR_Status_e" class-ref="di9a2c1ed3d52b43d4be4977c5413ee99b7850" />
-        <type id="Class:di04826126ae7342d197787703ead1ba195698" name="DRV_PWR_Status_c" class-ref="di04826126ae7342d197787703ead1ba195698" />
+        <type id="Class:di04826126ae7342d197787703ead1ba195698" name="DrvPwrStatusC" class-ref="di04826126ae7342d197787703ead1ba195698" />
         <type id="Class:dia858f67632b844c2927bbf19e3d328de3088" name="DRV_BK_Mode_e" class-ref="dia858f67632b844c2927bbf19e3d328de3088" />
         <type id="Class:di93bb7e2b845145fd90eda841deeae5137596" name="SYS_SHD_Chan_c" class-ref="di93bb7e2b845145fd90eda841deeae5137596" />
         <type id="Class:dieffed73c069a46ba8b56be643176419e9124" name="DRV_EA_Device_c" class-ref="dieffed73c069a46ba8b56be643176419e9124" />
@@ -269,7 +273,9 @@
         <type id="Class:b10a835783a5437aa07a6bb96c9c8c14" name="DrvCanMessageC" class-ref="b10a835783a5437aa07a6bb96c9c8c14" />
         <type id="Class:di180be9ab6da8448d86990a0be157a4a81531" name="DRV_SCPI" class-ref="di180be9ab6da8448d86990a0be157a4a81531" />
         <type id="Class:58095b9d072f4fd99c0f1be828becb82" name="DRV_EA_Device_c" class-ref="58095b9d072f4fd99c0f1be828becb82" />
-        <type id="Class:2b892ff844e44a61b48f70f00eb777fd" name="DRV_PWR_Data_c" class-ref="2b892ff844e44a61b48f70f00eb777fd" />
+        <type id="Class:2b892ff844e44a61b48f70f00eb777fd" name="DrvPwrDataC" class-ref="2b892ff844e44a61b48f70f00eb777fd" />
+        <type id="Class:922c942e1eff4320bf4cdc8773bc8a61" name="DrvPwrMeasuresC" class-ref="922c942e1eff4320bf4cdc8773bc8a61" />
+        <type id="Class:211a8124e5f34195b9feae2eb9c1d9d5" name="Class40" class-ref="211a8124e5f34195b9feae2eb9c1d9d5" />
         <type id="Serial" name="Serial" />
         <type id="Class:di1830f8eab361403aa9537c9ddde2a0a94381" name="MID_MEAS" class-ref="di1830f8eab361403aa9537c9ddde2a0a94381" />
         <type id="Class:dia6c5d53022714d438994c938caab8cd63758" name="DRV_EPC_Limit_e" class-ref="dia6c5d53022714d438994c938caab8cd63758" />
@@ -343,7 +349,7 @@
     <item id="7d33644658e94eec842c3d0f96c0006b" cid="PROP343" type="property" owner="baf57409538e4fa18390300af10e5912" creation-date="07/11/2023 11:37:17" visibility="private">
       <structural-feature type="DRV_EA_Properties_C" type-id="Class:di552ff51f0de44c8d9e5d8d894ba0a7fe5430" />
     </item>
-    <item id="9c73ba22ceef44de8e983147a55707eb" cid="PROP265" type="property" owner="69d1270176ef4ba9af0a70e58b4f6fd5" creation-date="07/10/2023 12:50:27" visibility="private" />
+    <item id="9c73ba22ceef44de8e983147a55707eb" cid="PROP265" type="property" owner="69d1270176ef4ba9af0a70e58b4f6fd5" creation-date="07/10/2023 12:50:27" visibility="undefined" />
     <item id="24622204eae84eeda7253cb8988e0dc7" cid="PROP145" type="property" name="_MAX_LEN_IN_BYTES" owner="f37f2996c2e8442b8346358f88986caf" creation-date="03/31/2022 08:40:15" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -454,6 +460,9 @@
       </style>
       <structural-feature type="int" type-id="Python.int" />
     </item>
+    <item id="754c2a0a31ed4c56ad701dfddd16e2f8" cid="PROP358" type="property" owner="9e868d0a1dc14505807383347ccb3519" creation-date="07/11/2023 12:37:59" visibility="undefined">
+      <structural-feature type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" />
+    </item>
     <item id="302086d2e31848abb110da9bcf560d98" cid="PROP142" type="property" name="_PARITY" owner="f37f2996c2e8442b8346358f88986caf" creation-date="03/31/2022 08:38:55" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -530,6 +539,9 @@
       <structural-feature type="DRV_EA_Mode_e" type-id="Class:di58dc7eb0e31a4432ad15c5defc7204459124" />
       <property aggregation="shared" redefines="874096b9c65a4bbcbf1cc789a81fe938" />
     </item>
+    <item id="419caf045eb644e6bd66e19b1974e461" cid="PROP363" type="property" name="__properties" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/11/2023 12:42:34" visibility="private">
+      <structural-feature type="DrvPwrPropertiesC" type-id="Class:di3f1173a556014bcb8a71995de064eadc7850" />
+    </item>
     <item id="di967cbbe033854b61bcf2bb9aed1a2af08956" cid="ELEM022" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
       <drawing-shape type="Rectangle" />
@@ -559,6 +571,9 @@
       </style>
       <structural-feature type="float" type-id="Python.float" />
       <property default-value="0.5" />
+    </item>
+    <item id="b6f218dcfafe4555bfb716cfc25a23c9" cid="PROP345" type="property" name="__current_data" owner="1c622d380fff4f8a84ba93402a5f5eee" creation-date="07/11/2023 12:26:53" visibility="private">
+      <structural-feature type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" />
     </item>
     <item id="di2870dfa6c3af4452b5daeb5f6f612b536549" cid="ELEM066" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -711,6 +726,9 @@
       </style>
       <structural-feature type="DRV_SCPI_Handler_c" type-id="Class:di5f22ada1c49d4c77b57e002ea4c8490c3366" />
     </item>
+    <item id="1031d1a37b0a496bb9fc9c2d48b27893" cid="PROP362" type="property" name="__message" owner="di04826126ae7342d197787703ead1ba195698" creation-date="07/11/2023 12:39:47" visibility="private">
+      <structural-feature type="DrvPwrStatusE" type-id="Class:dic4db15b003a148eaa102155ce35cf0985698" />
+    </item>
     <item id="aaf3142822c446ee87208fe23e158dc0" cid="PROP150" type="property" name="message" owner="4915ae0c1efc4853a5af8792509cebed" creation-date="07/10/2023 11:52:55" visibility="public">
       <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -794,31 +812,6 @@
     <item id="did70c69ed5e354e7b9a99697c44606a496549" cid="ELEM065" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
       <drawing-shape type="Rectangle" />
-    </item>
-    <item id="di880e4d63d9bf4992b28906c6e2aa4e7c7850" cid="PROP251" type="property" name="__properties" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/10/2023 09:14:52" visibility="private">
-      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-        <background type="solid" colors="#F2F2F2,#F2F2F2" />
-        <border color="#555555" width="2" />
-        <label-connector color="#80000000" dash-style="Dash" />
-        <alternate-styles>
-          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-            <background type="solid" colors="#203D85,#203D85" />
-            <border color="#203D85" width="2" />
-            <label-connector color="#80000000" dash-style="Dash" />
-          </alternate-style>
-        </alternate-styles>
-      </style>
-      <structural-feature type="DRV_PWR_Properties_c" type-id="Class:dideb76258a8704f56ab70dcfb2aea79124955" />
     </item>
     <item id="di033b7822a73c4aee932c78f206bc54242748" cid="PROP166" type="property" name="limit" owner="di1342d2f72c86487ea91a8aeaebecc9fb8518" creation-date="07/10/2023 09:05:41" visibility="public">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
@@ -957,6 +950,9 @@
       </style>
       <structural-feature type="int" type-id="Python.int" />
       <property default-value="0" />
+    </item>
+    <item id="3d4b2690ff23438c8480f87012af1631" cid="PROP346" type="property" owner="1c622d380fff4f8a84ba93402a5f5eee" creation-date="07/11/2023 12:26:53" visibility="undefined">
+      <structural-feature type="DrvPwrDeviceC" type-id="Class:di981e1e5fd82846428d6da112ab4c531e7850" />
     </item>
     <item id="5d451cb7abd94dcd805a005f1c94ce35" cid="PROP295" type="property" owner="e3513be02ece424a9c307d984c5bc271" creation-date="07/10/2023 14:57:11" visibility="private">
       <structural-feature type="DRV_BK_Data_C" type-id="Class:f4756779010447738bd4900eca258469" />
@@ -1231,6 +1227,31 @@
       </style>
       <structural-feature type="DRV_RS_Mode_e" type-id="Class:di58dc7eb0e31a4432ad15c5defc7204459124" />
     </item>
+    <item id="009e7c46398e4b38b98ed7d38cc966e3" cid="PROP272" type="property" name="mode" owner="2b892ff844e44a61b48f70f00eb777fd" creation-date="07/10/2023 13:41:46" visibility="public">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+        <background type="solid" colors="#F2F2F2,#F2F2F2" />
+        <border color="#555555" width="2" />
+        <label-connector color="#80000000" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+            <background type="solid" colors="#203D85,#203D85" />
+            <border color="#203D85" width="2" />
+            <label-connector color="#80000000" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <property abstract="true" />
+    </item>
     <item id="di9bf88f2acb0940bfa023a7867456bd887850" cid="PROP247" type="property" name="status" owner="dia8f4abbd74b04756b293545b26fa44817850" creation-date="07/05/2023 14:40:05" visibility="public">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -1254,7 +1275,7 @@
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="DRV_PWR_Status_c" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+      <structural-feature type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
     </item>
     <item id="111079445e1148a398adbb19958f5de5" cid="PROP081" type="property" name="voltage" owner="e6ee8731d7be4a4fb03f6a1d8bf12c75" creation-date="07/06/2023 14:21:42" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
@@ -1641,7 +1662,7 @@
       <drawing-shape type="Rectangle" />
     </item>
     <item id="c4131aabb9384746b46498da9bf78171" cid="PROP296" type="property" owner="e3513be02ece424a9c307d984c5bc271" creation-date="07/10/2023 14:57:11" visibility="private">
-      <structural-feature type="DRV_PWR_Data_c" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" />
+      <structural-feature type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" />
     </item>
     <item id="di0ab5887f8f674005906f1fc67ae9d4244839" cid="ELEM038" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -1677,8 +1698,8 @@
         <text>Queue</text>
       </drawing-text>
     </item>
-    <item id="ae77f821d5924da384d9d9437f770bd3" cid="PROP266" type="property" owner="69d1270176ef4ba9af0a70e58b4f6fd5" creation-date="07/10/2023 12:50:27" visibility="private">
-      <structural-feature type="DRV_PWR_Status_c" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+    <item id="ae77f821d5924da384d9d9437f770bd3" cid="PROP266" type="property" owner="69d1270176ef4ba9af0a70e58b4f6fd5" creation-date="07/10/2023 12:50:27" visibility="undefined">
+      <structural-feature type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
     </item>
     <item id="7eb2cb51c3624e50a3b46283d098029a" cid="GROUP013" type="group" name="Group" owner="c591409168da400595dd158907f53d11" creation-date="07/05/2023 08:21:12" />
     <item id="dic864d4ec1bde4a9584cd6f5877b1b8075698" cid="PROP264" type="property" name="__error_code" owner="di04826126ae7342d197787703ead1ba195698" creation-date="07/06/2023 11:49:16" visibility="private">
@@ -2000,11 +2021,39 @@ Qué se hace con el código de error?</comment>
     <item id="b0ec54bb97a14d85bd0ff8230086375b" cid="PROP290" type="property" name="__curent_data" owner="082962a183934889914e6fadea8d786e" creation-date="07/10/2023 14:28:47" visibility="private">
       <structural-feature type="DRV_BK_Data_C" type-id="Class:f4756779010447738bd4900eca258469" />
     </item>
+    <item id="a85165dfb2b844f58e76b3d5b722ad68" cid="PROP273" type="property" name="status" owner="2b892ff844e44a61b48f70f00eb777fd" creation-date="07/10/2023 13:41:51" visibility="public">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+        <background type="solid" colors="#F2F2F2,#F2F2F2" />
+        <border color="#555555" width="2" />
+        <label-connector color="#80000000" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+            <background type="solid" colors="#203D85,#203D85" />
+            <border color="#203D85" width="2" />
+            <label-connector color="#80000000" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <structural-feature type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+    </item>
     <item id="di0ea6b42f7675463a9001e103f46a83856549" cid="ELEM068" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
       <drawing-shape type="Rectangle" />
     </item>
     <item id="dicf04b83dd62044b89d1efea98f7218f23088" cid="PROP287" type="property" owner="di98228b69de3f4cdaa39aa0ce44ca13a23088" creation-date="07/10/2023 09:16:30" visibility="private" />
+    <item id="171e9036b81248aa9368b5932875cde8" cid="PROP361" type="property" name="__currentData" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/11/2023 12:38:35" visibility="private">
+      <structural-feature type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" />
+    </item>
     <item id="f099f07e62a947c59c8151af005c1388" cid="PROP133" type="property" name="__device_handler" owner="dieffed73c069a46ba8b56be643176419e9124" creation-date="07/10/2023 09:17:19" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -2203,7 +2252,7 @@ Qué se hace con el código de error?</comment>
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="DRV_SCPI_Handler_c" type-id="Class:di5f22ada1c49d4c77b57e002ea4c8490c3366" />
+      <structural-feature type="DrvScpiHandlerC" type-id="Class:di5f22ada1c49d4c77b57e002ea4c8490c3366" />
     </item>
     <item id="di3fd576c1ac0d45348fe07fa9a68e78927850" cid="PROP243" type="property" name="maxVoltLimit" owner="di3f1173a556014bcb8a71995de064eadc7850" creation-date="07/10/2023 09:07:25" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
@@ -2230,31 +2279,6 @@ Qué se hace con el código de error?</comment>
       </style>
       <structural-feature type="int" type-id="Python.int" />
       <property default-value="0" />
-    </item>
-    <item id="di294fff5e4fd346ed8a076ea963bee1025698" cid="PROP263" type="property" name="status" owner="di04826126ae7342d197787703ead1ba195698" creation-date="07/06/2023 11:49:15" visibility="private">
-      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-        <background type="solid" colors="#F2F2F2,#F2F2F2" />
-        <border color="#555555" width="2" />
-        <label-connector color="#80000000" dash-style="Dash" />
-        <alternate-styles>
-          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-            <background type="solid" colors="#203D85,#203D85" />
-            <border color="#203D85" width="2" />
-            <label-connector color="#80000000" dash-style="Dash" />
-          </alternate-style>
-        </alternate-styles>
-      </style>
-      <structural-feature type="DRV_PWR_Status_e" type-id="Class:dic4db15b003a148eaa102155ce35cf0985698" />
     </item>
     <item id="di0b2666b11b324b9ab4a31580bdedbec56549" cid="ELEM067" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -2990,6 +3014,9 @@ Qué se hace con el código de error?</comment>
         </alternate-styles>
       </style>
       <structural-feature type="DRV_RS_Data_c" type-id="Class:di1342d2f72c86487ea91a8aeaebecc9fb8518" />
+    </item>
+    <item id="d8ce17b1dcd84bceb2bc40cf7f141ce8" cid="PROP359" type="property" owner="9e868d0a1dc14505807383347ccb3519" creation-date="07/11/2023 12:37:59" visibility="undefined">
+      <structural-feature type="DrvPwrDeviceC" type-id="Class:di981e1e5fd82846428d6da112ab4c531e7850" />
     </item>
     <item id="di04eeaec11e374fa894faff7b1171e7891893" cid="ELEM027" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -7623,7 +7650,7 @@ Qué se hace con el código de error?</comment>
                       <operation id="oc2450a6bda914941ad2b74f1d0a29c1c779" cid="OP055" name="DRV_BK_Data_C" creation-date="07/10/2023 14:27:35" type="" type-id="" visibility="private">
                         <parameters>
                           <parameter id="pf28ab8017ac5437090808fcfc1dbce46" name="mode" type="DRV_BK_Mode_e" type-id="Class:dibba2fb20c4734226ae421e7d4a55ae052522" />
-                          <parameter id="pf74c6d7d106543bc89fdc46315682c89" name="status" type="DRV_PWR_Status_c" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+                          <parameter id="pf74c6d7d106543bc89fdc46315682c89" name="status" type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
                           <parameter id="p8393becff4af4026aff162ec72b5988e" name="voltage" type="int" type-id="Python.int" />
                           <parameter id="pcb821b5a67684cc9a9fbf9a28a43dd6e" name="current" type="int" type-id="Python.int" />
                           <parameter id="p71f2ac9a7cf3463aa1af2350b696f07b" name="power" type="int" type-id="Python.int" />
@@ -7904,7 +7931,7 @@ Qué se hace con el código de error?</comment>
                   </item>
                 </layer>
               </diagram>
-              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="5" overview-order-index="5" uid="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1163,-696" zoom="0.6">
+              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="5" overview-order-index="5" uid="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1015,-611" zoom="0.7">
                 <style>
                   <background-color index="1" color="#FFFFFFFF" />
                   <background-color index="2" color="#FFFFFFFF" />
@@ -7916,20 +7943,16 @@ Qué se hace con el código de error?</comment>
                   </authors>
                   <description />
                   <creation-date>07/10/2023 12:43:45</creation-date>
-                  <change-date>07/10/2023 13:53:31</change-date>
+                  <change-date>07/11/2023 12:38:56</change-date>
                   <revision-count>0</revision-count>
                   <version />
                 </meta>
                 <abstract-items>
                   <item id="difbba6f2bc20a4889a064e0cf02119f817850" cid="REL064" type="relationship" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 09:15:03" from="di3f1173a556014bcb8a71995de064eadc7850" to="di981e1e5fd82846428d6da112ab4c531e7850" visibility="package">
                     <relation from="dideb76258a8704f56ab70dcfb2aea79124955" to="dieffed73c069a46ba8b56be643176419e9124" derived="false">
-                      <start-role id="umlar-90abd4f9-5efc-4653-8953-706a4e1deb13" name="" navigability="" association-type="association" visibility="private" property-ref="dif0cac05f4ffd4098ac1ba75168a5d8677850" />
+                      <start-role id="umlar-90abd4f9-5efc-4653-8953-706a4e1deb13" name="" navigability="" association-type="association" visibility="private" attribute-ref="a69520b25d04d445d807a7aae5132ba7278" property-ref="dif0cac05f4ffd4098ac1ba75168a5d8677850" />
                       <end-role id="umlar-effdb59e-9153-495b-8b63-11722a7f6d48" name="" navigability="yes" association-type="association" visibility="private" attribute-ref="ae940a5b75c8c45f09debecd2444f02f5827" property-ref="di22404c210a074247b15734e346637d137850" />
                     </relation>
-                  </item>
-                  <item id="bf28f73482774b96b46b15f76a94a765" cid="PROP294" type="property" name="__current_data" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/10/2023 14:54:38" visibility="private">
-                    <structural-feature type="DRV_BK_Data_C" type-id="Class:f4756779010447738bd4900eca258469" />
-                    <property />
                   </item>
                   <item id="a825c207dada49bca1aa0305cb000083" cid="I004" type="uml-interface-classifier" name="DRV_PWR_Measures_c" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 12:56:55" visibility="undefined">
                     <owned-items />
@@ -7953,7 +7976,7 @@ Qué se hace con el código de error?</comment>
                   </item>
                   <item id="107bd208b6834e6796044daf7e583308" cid="GNR004" type="generalization" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:51:09" to="di3f1173a556014bcb8a71995de064eadc7850" visibility="package" />
                   <item id="1728312e67104f218e2aea53aac5cae0" cid="C066" type="class" name="Class17" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:51:09" />
-                  <item id="di22404c210a074247b15734e346637d137850" cid="PROP240" type="property" owner="difbba6f2bc20a4889a064e0cf02119f817850" creation-date="07/10/2023 09:15:03" visibility="private">
+                  <item id="di22404c210a074247b15734e346637d137850" cid="PROP240" type="property" owner="difbba6f2bc20a4889a064e0cf02119f817850" creation-date="07/10/2023 09:15:03" visibility="undefined">
                     <structural-feature type="DrvPwrDeviceC" type-id="Class:dieffed73c069a46ba8b56be643176419e9124" />
                   </item>
                   <item id="4c2bb2d8324d4566a1656ee97a7bc9c7" cid="REA010" type="realization" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:42:25" from="2b892ff844e44a61b48f70f00eb777fd" to="922c942e1eff4320bf4cdc8773bc8a61" visibility="package" />
@@ -7966,8 +7989,15 @@ Qué se hace con el código de error?</comment>
                   <item id="69d1270176ef4ba9af0a70e58b4f6fd5" cid="REL066" type="relationship" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 12:50:27" from="dic4db15b003a148eaa102155ce35cf0985698" to="di04826126ae7342d197787703ead1ba195698" visibility="package">
                     <owned-items />
                     <relation from="dic4db15b003a148eaa102155ce35cf0985698" to="di04826126ae7342d197787703ead1ba195698" derived="false">
-                      <start-role id="umlar-cb4e2a4d-d8ba-4d6d-8a67-c6f565e40147" name="" navigability="" association-type="association" visibility="private" property-ref="9c73ba22ceef44de8e983147a55707eb" />
+                      <start-role id="umlar-cb4e2a4d-d8ba-4d6d-8a67-c6f565e40147" name="" navigability="" association-type="association" visibility="private" attribute-ref="adf3e66aef34547acba356ab350536138550" property-ref="9c73ba22ceef44de8e983147a55707eb" />
                       <end-role id="umlar-cdef3b41-9727-4d5f-b0fe-71855dea527c" name="" navigability="yes" association-type="association" visibility="private" attribute-ref="af9249ef15bc34ca9a6c3b7c7bb1c0eeb787" property-ref="ae77f821d5924da384d9d9437f770bd3" />
+                    </relation>
+                  </item>
+                  <item id="1c622d380fff4f8a84ba93402a5f5eee" cid="REL088" type="relationship" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/11/2023 12:26:53" from="2b892ff844e44a61b48f70f00eb777fd" to="di981e1e5fd82846428d6da112ab4c531e7850" visibility="package">
+                    <owned-items />
+                    <relation from="2b892ff844e44a61b48f70f00eb777fd" to="di981e1e5fd82846428d6da112ab4c531e7850" derived="false">
+                      <start-role id="umlar-8bfed1d1-66ae-44f8-83f8-852b95dcff96" name="" navigability="" association-type="association" visibility="private" attribute-ref="a8f8342ad7ee3456a9bf0064a2dac2cc4438" property-ref="b6f218dcfafe4555bfb716cfc25a23c9" />
+                      <end-role id="umlar-b7c25372-ea1e-4665-868c-2b5bb4e4d8ef" name="" navigability="yes" association-type="association" visibility="private" attribute-ref="a90182cb0f04541d193a545062a8730bc437" property-ref="3d4b2690ff23438c8480f87012af1631" />
                     </relation>
                   </item>
                   <item id="di1ee9c692012f414dbb8083980b8583957850" cid="PROP255" type="property" owner="di85790ed25dce450eb8bf41b5a969df9c7850" creation-date="07/10/2023 12:08:15" visibility="private">
@@ -7987,57 +8017,41 @@ Qué se hace con el código de error?</comment>
                     </attributes>
                     <enumeration-items />
                   </item>
-                  <item id="2b892ff844e44a61b48f70f00eb777fd" cid="C063" type="class" name="DRV_PWR_Data_c" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:41:28">
+                  <item id="2b892ff844e44a61b48f70f00eb777fd" cid="C063" type="class" name="DrvPwrDataC" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:41:28" visibility="undefined">
                     <owned-items />
                     <attributes>
                       <attribute id="a092be6fa467e49b2b69c963e38fb7fe9600" cid="PROP272" name="mode" creation-date="07/10/2023 13:41:46" property-ref="009e7c46398e4b38b98ed7d38cc966e3" />
                       <attribute id="a4329321e9e3641fbba7ebf82fbb4db29184" cid="PROP273" name="status" creation-date="07/10/2023 13:41:51" property-ref="a85165dfb2b844f58e76b3d5b722ad68" />
                     </attributes>
                     <operations>
-                      <operation id="o84a3c0dc05d24ce2846b85588328b67561" cid="OP048" name="DRV_PWR_Data_C" creation-date="07/10/2023 13:44:01" type="" type-id="" visibility="public">
+                      <operation id="o84a3c0dc05d24ce2846b85588328b67561" cid="OP048" name="DrvPwrDataC" creation-date="07/10/2023 13:44:01" type="" type-id="" visibility="public">
                         <parameters>
-                          <parameter id="p78b3284e7c3b43cd9c1941649a2d208d" name="mode" type="" type-id="">
-                            <tagged-values>
-                              <tagged-value id="tv73ee0abcce8d4cb3894ae02bfe7e6615" name="set_mode" type="reference" multiple="false" hidden="false" ref="009e7c46398e4b38b98ed7d38cc966e3" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="pade5337f99d74033a7d847d34a199f5a" name="status" type="DRV_PWR_Status_c" type-id="Class:di04826126ae7342d197787703ead1ba195698">
-                            <tagged-values>
-                              <tagged-value id="tvd498f8c72cb34e5698c905345a333016" name="set_status" type="reference" multiple="false" hidden="false" ref="a85165dfb2b844f58e76b3d5b722ad68" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="p775641ecc4314107801d37c56d99aff9" name="voltage" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tvb2dad0a4ea4944b3994b97f43c49b247" name="set_voltage" type="reference" multiple="false" hidden="false" ref="97fc7416d03f434e99496693fcfbd92b" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="pfa79437085434ed78a08c65926f382db" name="current" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tv751f5351166b4451b3b02c7ba59f7b96" name="set_current" type="reference" multiple="false" hidden="false" ref="8482d3e0325e4ce4a60c07829c927b3a" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="p194e2e8ed3e04028976245f49f31cf5d" name="power" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tvd7ae124516e54b64a3878127030da52d" name="set_power" type="reference" multiple="false" hidden="false" ref="e8b85c34172c4c39a2537e281e986691" />
-                            </tagged-values>
-                          </parameter>
+                          <parameter id="p78b3284e7c3b43cd9c1941649a2d208d" name="mode" type="" type-id="" />
+                          <parameter id="pade5337f99d74033a7d847d34a199f5a" name="status" type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+                          <parameter id="p775641ecc4314107801d37c56d99aff9" name="voltage" type="int" type-id="Python.int" />
+                          <parameter id="pfa79437085434ed78a08c65926f382db" name="current" type="int" type-id="Python.int" />
+                          <parameter id="p194e2e8ed3e04028976245f49f31cf5d" name="power" type="int" type-id="Python.int" />
                         </parameters>
                         <stereotypes>
                           <stereotype>create</stereotype>
                         </stereotypes>
                       </operation>
                     </operations>
+                    <source-codes>
+                      <source-code language="ActionScript" />
+                    </source-codes>
                   </item>
-                  <item id="di04826126ae7342d197787703ead1ba195698" cid="C061" type="class" name="DRV_PWR_Status_c" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/06/2023 11:43:33" visibility="undefined">
+                  <item id="di04826126ae7342d197787703ead1ba195698" cid="C061" type="class" name="DrvPwrStatusC" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/06/2023 11:43:33" visibility="undefined">
+                    <owned-items />
                     <attributes>
-                      <attribute id="af9249ef15bc34ca9a6c3b7c7bb1c0eeb787" cid="PROP263" name="status" creation-date="07/06/2023 11:49:15" property-ref="di294fff5e4fd346ed8a076ea963bee1025698" />
                       <attribute id="ac02112177a8047dfaa0fbe8d3efe0512930" cid="PROP264" name="__error_code" creation-date="07/06/2023 11:49:16" property-ref="dic864d4ec1bde4a9584cd6f5877b1b8075698" />
+                      <attribute id="adf3e66aef34547acba356ab350536138550" cid="PROP362" name="__message" creation-date="07/11/2023 12:39:47" property-ref="1031d1a37b0a496bb9fc9c2d48b27893" />
                     </attributes>
                     <operations>
-                      <operation id="o962595e62cd94baa977e2ce4655c34d0186" cid="OP043" name="DRV_PWR_Status_c" creation-date="07/10/2023 12:48:16" type="" type-id="" visibility="public">
+                      <operation id="o962595e62cd94baa977e2ce4655c34d0186" cid="OP043" name="DrvPwrStatusC" creation-date="07/10/2023 12:48:16" type="" type-id="" visibility="public">
                         <parameters>
                           <parameter id="p7c0ffcd58def45a1b51039068b347cca" name="error" type="int" type-id="Python.int" multiplicity="0..1" direction="In" />
-                          <parameter id="pfe044087e76a4e09a3c05f52e0daca0c" name="error" type="DRV_PWR_Status_e" type-id="Class:di9a2c1ed3d52b43d4be4977c5413ee99b7850" multiplicity="0..1" />
+                          <parameter id="pfe044087e76a4e09a3c05f52e0daca0c" name="error" type="DrvPwrStatusE" type-id="Class:dic4db15b003a148eaa102155ce35cf0985698" multiplicity="0..1" />
                         </parameters>
                         <stereotypes>
                           <stereotype>create</stereotype>
@@ -8097,10 +8111,10 @@ Qué se hace con el código de error?</comment>
                       <enumeration-item id="aab576b0a5d7c4a2381df9bb53669746d95" cid="ENI021" name="CURR_R20A" creation-date="07/10/2023 12:35:19" value="CURR:DC:RANGE 20" />
                     </enumeration-items>
                   </item>
-                  <item id="dif0cac05f4ffd4098ac1ba75168a5d8677850" cid="PROP239" type="property" owner="difbba6f2bc20a4889a064e0cf02119f817850" creation-date="07/10/2023 09:15:03" visibility="private">
-                    <structural-feature type="DRV_PWR_Properties_c" type-id="Class:dideb76258a8704f56ab70dcfb2aea79124955" />
+                  <item id="dif0cac05f4ffd4098ac1ba75168a5d8677850" cid="PROP239" type="property" owner="difbba6f2bc20a4889a064e0cf02119f817850" creation-date="07/10/2023 09:15:03" visibility="undefined">
+                    <structural-feature type="DrvPwrPropertiesC" type-id="Class:dideb76258a8704f56ab70dcfb2aea79124955" />
                   </item>
-                  <item id="922c942e1eff4320bf4cdc8773bc8a61" cid="C064" type="class" name="DRV_PWR_Measures_c" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:42:52" visibility="undefined">
+                  <item id="922c942e1eff4320bf4cdc8773bc8a61" cid="C064" type="class" name="DrvPwrMeasuresC" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/10/2023 13:42:52" visibility="undefined">
                     <owned-items />
                     <attributes>
                       <attribute id="aa6c579b7bbf64d8589269f40cce819e2400" cid="PROP274" name="voltage" creation-date="07/10/2023 13:43:09" property-ref="97fc7416d03f434e99496693fcfbd92b" />
@@ -8108,7 +8122,7 @@ Qué se hace con el código de error?</comment>
                       <attribute id="ad39b1f25b2d549b99ba162b4c5dad13c969" cid="PROP276" name="power" creation-date="07/10/2023 13:43:30" property-ref="e8b85c34172c4c39a2537e281e986691" />
                     </attributes>
                     <operations>
-                      <operation id="odd7923eed0924a9db769c5124f74d758527" cid="OP047" name="DRV_PWR_Measures_c" creation-date="07/10/2023 13:43:43" type="" type-id="" visibility="public">
+                      <operation id="odd7923eed0924a9db769c5124f74d758527" cid="OP047" name="DrvPwrMeasuresC" creation-date="07/10/2023 13:43:43" type="" type-id="" visibility="public">
                         <parameters>
                           <parameter id="p91630906611f4a9e8bf0c436f8892cbb" name="voltage" type="int" type-id="Python.int" />
                           <parameter id="p5ee5607382fa4a419fe77cc20aafd5ff" name="current" type="int" type-id="Python.int" />
@@ -8167,7 +8181,7 @@ Qué se hace con el código de error?</comment>
                     </attributes>
                   </item>
                   <item id="di3cdad7c2522b45279a76766e85b0febf7850" cid="PROP254" type="property" owner="di85790ed25dce450eb8bf41b5a969df9c7850" creation-date="07/10/2023 12:08:15" visibility="private" />
-                  <item id="di3f1173a556014bcb8a71995de064eadc7850" cid="C056" type="class" name="DRV_PWR_Properties_c" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/05/2023 14:16:12" visibility="undefined" is-abstract="true">
+                  <item id="di3f1173a556014bcb8a71995de064eadc7850" cid="C056" type="class" name="DrvPwrPropertiesC" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/05/2023 14:16:12" visibility="undefined" is-abstract="true">
                     <attributes>
                       <attribute id="a87a102aa383d40fd943d6e3e4eb5484a339" cid="PROP241" name="model" creation-date="07/10/2023 09:06:51" property-ref="die89adf7834414038adf0dbbdbf1532187850" />
                       <attribute id="a7619bd74c9e74985994135fae53430d5533" cid="PROP242" name="sn" creation-date="07/10/2023 09:09:08" property-ref="di51ad218dcbc348e3ae9ed4a61a68fae97850" />
@@ -8203,19 +8217,22 @@ Qué se hace con el código de error?</comment>
                       <source-code language="ActionScript" />
                     </source-codes>
                   </item>
-                  <item id="a85165dfb2b844f58e76b3d5b722ad68" cid="PROP273" type="property" name="status" owner="2b892ff844e44a61b48f70f00eb777fd" creation-date="07/10/2023 13:41:51" visibility="public">
-                    <structural-feature type="DRV_PWR_Status_c" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+                  <item id="9e868d0a1dc14505807383347ccb3519" cid="REL092" type="relationship" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/11/2023 12:37:59" from="2b892ff844e44a61b48f70f00eb777fd" to="di981e1e5fd82846428d6da112ab4c531e7850" visibility="package">
+                    <owned-items />
+                    <relation from="2b892ff844e44a61b48f70f00eb777fd" to="di981e1e5fd82846428d6da112ab4c531e7850" derived="false">
+                      <start-role id="umlar-bf3160ef-950e-445a-86c3-3ae9f5c7e22e" name="" navigability="" association-type="association" visibility="undefined" attribute-ref="a2ce5c1ec0c9f4194911093a965baf807606" property-ref="754c2a0a31ed4c56ad701dfddd16e2f8" />
+                      <end-role id="umlar-2a6dd8dd-ad66-45f2-bf76-77bfa190e3e4" name="" navigability="yes" association-type="association" visibility="undefined" attribute-ref="a9c174827dcbc4144bfa92136b38589d2702" property-ref="d8ce17b1dcd84bceb2bc40cf7f141ce8" />
+                    </relation>
                   </item>
-                  <item id="009e7c46398e4b38b98ed7d38cc966e3" cid="PROP272" type="property" name="mode" owner="2b892ff844e44a61b48f70f00eb777fd" creation-date="07/10/2023 13:41:46" visibility="public" />
                   <item id="di981e1e5fd82846428d6da112ab4c531e7850" cid="C059" type="class" name="DrvPwrDeviceC" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/05/2023 14:16:12" visibility="undefined">
                     <owned-items />
                     <attributes>
-                      <attribute id="ae940a5b75c8c45f09debecd2444f02f5827" cid="PROP251" name="__properties" creation-date="07/10/2023 09:14:52" property-ref="di880e4d63d9bf4992b28906c6e2aa4e7c7850" />
                       <attribute id="a37c0339e7ab0480c9ad115776374f43b892" cid="PROP252" name="__device_handler" creation-date="07/10/2023 09:17:19" property-ref="di82ba6de569ce4dcb89938e6d754ff6fb7850" />
-                      <attribute id="a768debe1433e43239adc7b9fd94423a0823" cid="PROP294" name="__current_data" creation-date="07/10/2023 14:54:38" property-ref="bf28f73482774b96b46b15f76a94a765" />
+                      <attribute id="a2ce5c1ec0c9f4194911093a965baf807606" cid="PROP361" name="__currentData" creation-date="07/11/2023 12:38:35" property-ref="171e9036b81248aa9368b5932875cde8" />
+                      <attribute id="a69520b25d04d445d807a7aae5132ba7278" cid="PROP363" name="__properties" creation-date="07/11/2023 12:42:34" property-ref="419caf045eb644e6bd66e19b1974e461" />
                     </attributes>
                     <operations>
-                      <operation id="oe5895dead26a48b6afaa4a5042d1b06a512" cid="OP049" name="DRV_PWR_Device_c" creation-date="07/10/2023 13:47:41" type="" type-id="" visibility="public">
+                      <operation id="oe5895dead26a48b6afaa4a5042d1b06a512" cid="OP049" name="DrvPwrDeviceC" creation-date="07/10/2023 13:47:41" type="" type-id="" visibility="public">
                         <parameters>
                           <parameter id="pad601b22819f49b5ae9a333dda5ce166" name="port" type="str" type-id="Python.str" direction="In" />
                         </parameters>
@@ -8223,17 +8240,17 @@ Qué se hace con el código de error?</comment>
                           <stereotype>create</stereotype>
                         </stereotypes>
                       </operation>
-                      <operation id="ob7da6d8dcf9c49e8944f84e41a6a591a912" cid="OP008" name="getMeasures" creation-date="07/05/2023 14:23:06" type="DRV_PWR_Measures_c" type-id="Class:diee78cf31ab074dbb86d34a1b34c7d40a6530" visibility="public">
+                      <operation id="ob7da6d8dcf9c49e8944f84e41a6a591a912" cid="OP008" name="get_measures" creation-date="07/05/2023 14:23:06" type="DrvPwrMeasuresC" type-id="Class:922c942e1eff4320bf4cdc8773bc8a61" visibility="public">
                         <source-codes>
                           <source-code language="ActionScript" />
                         </source-codes>
                       </operation>
-                      <operation id="o99a468bbebe949dd936167c339ee364f83" cid="OP030" name="getData" creation-date="07/10/2023 09:14:36" type="DRV_PWR_Data_c" type-id="Class:di6af6fffda1dd48a89776f3e988d9a2276530" visibility="public">
+                      <operation id="o99a468bbebe949dd936167c339ee364f83" cid="OP030" name="get_data" creation-date="07/10/2023 09:14:36" type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" visibility="public">
                         <source-codes>
                           <source-code language="ActionScript" />
                         </source-codes>
                       </operation>
-                      <operation id="o242ff6cbc57d40bb9316905a53b81c3f595" cid="OP041" name="getProperties" creation-date="07/10/2023 12:16:51" type="DRV_PWR_Properties_c" type-id="Class:dif6b089aee4d040b1aed20e676482daaf8518" visibility="public">
+                      <operation id="o242ff6cbc57d40bb9316905a53b81c3f595" cid="OP041" name="get_properties" creation-date="07/10/2023 12:16:51" type="DrvPwrPropertiesC" type-id="Class:di3f1173a556014bcb8a71995de064eadc7850" visibility="public">
                         <source-codes>
                           <source-code language="ActionScript" />
                         </source-codes>
@@ -8244,7 +8261,7 @@ Qué se hace con el código de error?</comment>
                       <source-code language="ActionScript" />
                     </source-codes>
                   </item>
-                  <item id="dic4db15b003a148eaa102155ce35cf0985698" cid="E020" type="enumeration" name="DRV_PWR_Status_e" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/05/2023 13:14:30" visibility="undefined">
+                  <item id="dic4db15b003a148eaa102155ce35cf0985698" cid="E020" type="enumeration" name="DrvPwrStatusE" owner="difecd0c9a7e18423ca4b4f495a639b1e57850" creation-date="07/05/2023 13:14:30" visibility="undefined">
                     <stereotypes>
                       <stereotype name="enumeration" />
                     </stereotypes>
@@ -8264,13 +8281,13 @@ Qué se hace con el código de error?</comment>
                 </abstract-items>
                 <layer id="4af732adbdc8455097511f1697ed0dc3" name="Default" visible="true" enabled="true" locked="false">
                   <item id="difecd0c9a7e18423ca4b4f495a639b1e57850" iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/10/2023 10:48:12" order-index="38" type="entity">
-                    <layout ax="-1320" ay="-870" awidth="1470" aheight="1119.698" x="-510" y="-460" width="1470" height="970" expanded="-1320,-870,1470,1119.698" collapsed="0,0,0,0" rotation-center="327.75,150.5" />
+                    <layout ax="-1320" ay="-870" awidth="1460" aheight="900" x="-510" y="-870" width="1460" height="900" expanded="-1320,-870,1460,900" collapsed="0,0,0,0" rotation-center="347.75,260.3491" />
                     <package name-in-body="false" />
                   </item>
                   <item id="difbba6f2bc20a4889a064e0cf02119f817850" iid="e498239502264fafbdcfd5aa7ea38f21" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/10/2023 09:15:03" order-index="32" type="relation">
-                    <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="-1035" y1="-500" x2="-950" y2="-770" start-border-pos="0.125" end-border-pos="0.952240566037736" start-local-pos="200" end-local-pos="40" name-position="0,20">
+                    <layout start-role-position="20,45" end-role-position="30,-10" start-multiplicity-position="20,-15" end-multiplicity-position="25,15" line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="-1040" y1="-500" x2="-950" y2="-770" start-border-pos="0.122549019753933" end-border-pos="0.952830195426941" start-local-pos="200" end-local-pos="40" name-position="-40,-80">
                       <points>
-                        <point x="-1035" y="-500" />
+                        <point x="-1040" y="-500" />
                         <point x="-950" y="-770" />
                       </points>
                     </layout>
@@ -8282,8 +8299,8 @@ Qué se hace con el código de error?</comment>
                     <class />
                   </item>
                   <item id="di981e1e5fd82846428d6da112ab4c531e7850" iid="86f97d651c5d43c3a5d6590da26c0aa3" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" show-fields="true" creation-date="07/05/2023 14:16:12" order-index="0" type="entity">
-                    <layout ax="-950" ay="-810" awidth="430" aheight="212" x="-950" y="-810" width="430" height="200" rotation-center="25,-40" />
-                    <classifier />
+                    <layout ax="-950" ay="-810" awidth="430" aheight="212" x="-950" y="-810" width="430" height="212" rotation-center="25,-40" />
+                    <classifier show-association-attributes="false" />
                     <class />
                   </item>
                   <item id="dic4db15b003a148eaa102155ce35cf0985698" iid="3f916a4f16d34594a3c4ea551e0c16db" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/05/2023 13:14:30" order-index="0" type="entity">
@@ -8295,32 +8312,41 @@ Qué se hace con el código de error?</comment>
                     <class />
                   </item>
                   <item id="69d1270176ef4ba9af0a70e58b4f6fd5" iid="81dcb97d1fe547369efe7e1076b59d12" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/10/2023 12:50:27" order-index="40" type="relation">
-                    <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="rounded-rectangular" lock-start-point="true" lock-to-fields="true" auto-path="" x1="-290" y1="-180" x2="-390" y2="-169" start-border-pos="0.93801652892562" end-border-pos="0.300625" start-local-pos="30" end-local-pos="41" name-position="0,20">
+                    <layout start-role-position="30,20" end-role-position="30,-20" start-multiplicity-position="30,-20" end-multiplicity-position="25,15" line-style="rounded-rectangular" lock-start-point="true" lock-to-fields="true" auto-path="" x1="-290" y1="-180" x2="-390" y2="-180" start-border-pos="0.93801652892562" end-border-pos="0.287500001490116" start-local-pos="30" end-local-pos="41" name-position="0,20">
                       <points>
                         <point x="-290" y="-180" />
-                        <point x="-390" y="-169" />
+                        <point x="-390" y="-180" />
                       </points>
                     </layout>
                     <relation from="dic4db15b003a148eaa102155ce35cf0985698" from-iid="3f916a4f16d34594a3c4ea551e0c16db" to="di04826126ae7342d197787703ead1ba195698" to-iid="732236fb716343b68d7e8db400faa24b" to-field="af9249ef15bc34ca9a6c3b7c7bb1c0eeb787" />
                   </item>
+                  <item id="922c942e1eff4320bf4cdc8773bc8a61" iid="5c9a9f0514714c3abd809d3064841d74" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" show-fields="true" creation-date="07/10/2023 13:42:52" order-index="43" type="entity">
+                    <layout ax="-460" ay="-450" awidth="580" aheight="120" x="-460" y="-450" width="580" height="120" rotation-center="-220,10" />
+                    <classifier />
+                    <class />
+                  </item>
                   <item id="2b892ff844e44a61b48f70f00eb777fd" iid="edefc82c02e14b2ebb983d023510f064" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" show-cid="false" show-fields="true" creation-date="07/10/2023 13:41:28" order-index="41" type="entity">
-                    <layout ax="-410" ay="-790" awidth="490" aheight="227" x="-410" y="-790" width="490" height="200" rotation-center="-147,-3.5" />
+                    <layout ax="-360" ay="-780" awidth="460" aheight="200" x="-360" y="-780" width="460" height="200" rotation-center="-198,10" />
                     <classifier show-inherited-fields="true" />
                     <class />
                   </item>
                   <item id="4c2bb2d8324d4566a1656ee97a7bc9c7" iid="4e70f29891b54519849bd5d1efedaf0e" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/10/2023 13:42:25" order-index="42" type="relation">
-                    <layout line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-165" y1="-563" x2="-170" y2="-460" start-border-pos="0.625" end-border-pos="0.125" start-local-pos="168" end-local-pos="145" name-position="0,20">
+                    <layout line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-130" y1="-580" x2="-170" y2="-450" start-border-pos="0.625" end-border-pos="0.125" start-local-pos="168" end-local-pos="145" name-position="0,20">
                       <points>
-                        <point x="-165" y="-563" />
-                        <point x="-170" y="-460" />
+                        <point x="-130" y="-580" />
+                        <point x="-170" y="-450" />
                       </points>
                     </layout>
                     <relation from="2b892ff844e44a61b48f70f00eb777fd" from-iid="edefc82c02e14b2ebb983d023510f064" to="922c942e1eff4320bf4cdc8773bc8a61" to-iid="5c9a9f0514714c3abd809d3064841d74" />
                   </item>
-                  <item id="922c942e1eff4320bf4cdc8773bc8a61" iid="5c9a9f0514714c3abd809d3064841d74" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" show-fields="true" creation-date="07/10/2023 13:42:52" order-index="43" type="entity">
-                    <layout ax="-460" ay="-460" awidth="580" aheight="130" x="-460" y="-460" width="580" height="130" rotation-center="-220,15" />
-                    <classifier />
-                    <class />
+                  <item id="9e868d0a1dc14505807383347ccb3519" iid="4d8393c6a2eb498cab042cce7e6ebc5a" container="difecd0c9a7e18423ca4b4f495a639b1e57850" container-iid="466bb98a72fd43a584a70b4f70d3f0b4" creation-date="07/11/2023 12:37:59" order-index="44" type="relation">
+                    <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="rounded-rectangular" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-360" y1="-682" x2="-520" y2="-700" start-border-pos="0.877358496189117" end-border-pos="0.379716977477074" start-local-pos="130" end-local-pos="106" name-position="0,20">
+                      <points>
+                        <point x="-360" y="-682" />
+                        <point x="-520" y="-700" />
+                      </points>
+                    </layout>
+                    <relation from="2b892ff844e44a61b48f70f00eb777fd" from-iid="edefc82c02e14b2ebb983d023510f064" to="di981e1e5fd82846428d6da112ab4c531e7850" to-iid="86f97d651c5d43c3a5d6590da26c0aa3" />
                   </item>
                 </layer>
               </diagram>
