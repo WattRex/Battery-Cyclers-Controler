@@ -5,27 +5,27 @@
 
 # Logging template
 
-## Code to paste on top of the main.py file
+## Code to paste on top after imports of the main.py file
 
 ```
-from SYS.SYS_LOG import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
-cycler_logger = SYS_LOG_Logger_c('./SYS/SYS_LOG/logginConfig.conf')
-log = SYS_LOG_LoggerGetModuleLogger(__name__, './log_config.yaml')
+from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
+cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__, './log_config.yaml')
 ```
 
-## Code to paste on top of every .py file
+## Code to paste on top after imports of every .py file
 
 ```
-from SYS.SYS_LOG import SYS_LOG_LoggerGetModuleLogger
-log = SYS_LOG_LoggerGetModuleLogger(__name__, './log_config.yaml')
+from sys_abs.sys_log import sys_log_logger_get_module_logger
+log = sys_log_logger_get_module_logger(__name__)
 ```
 
 # Complete the ```log_config.yaml``` file (or whatever name you gave it)
 
-- You can place this file where you want but you have to specify its path and name when SYS_LOG_LoggerGetModuleLogger function is used.
+- You can place this file where you want but you have to specify its path and name when sys_log_logger_get_module_logger function is used.
 - If the file ```log_config.yaml``` is empty, all loggers created on your modules will be defined at error level by default.
 - To assign an specific logging level to a module, you have to write its name in this file and set the desired logging level like the following example.
-
+- There is a template of the file in ```template_log_config.yaml```
 ```
 MID.MID_DABS: "DEBUG"
 ```
