@@ -7,15 +7,16 @@ Example of use of the driver for SCPI devices.
 """
 
 #######################        MANDATORY IMPORTS         #######################
-import sys, os
+import sys
+import os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from sys.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys_abs.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./sys/sys_log/logginConfig.conf')
-log = SYS_LOG_LoggerGetModuleLogger(__name__, config_by_module_filename="./log_config.yaml")
+    cycler_logger = SYS_LOG_Logger_c('./sys_abs/SysLogLoggerC/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
 
@@ -23,7 +24,7 @@ log = SYS_LOG_LoggerGetModuleLogger(__name__, config_by_module_filename="./log_c
 #######################       THIRD PARTY IMPORTS        #######################
 
 #######################          MODULE IMPORTS          #######################
-from drv.drv_scpi import DrvScpiHandlerC, DrvScpiErrorC
+from drv.drv_scpi import DrvScpiHandlerC
 
 #######################          PROJECT IMPORTS         #######################
 
@@ -32,19 +33,19 @@ from drv.drv_scpi import DrvScpiHandlerC, DrvScpiErrorC
 
 #######################              CLASSES             #######################
 
-def main():
+def example():
+    '''Example of the remote SCPI.
+    '''
     multimeter = DrvScpiHandlerC(port='/dev/ttyUSB0', separator='\n', baudrate = 38400)
-    print(f"multimeter")
+    print("multimeter")
     # multimeter.send_msg('VOLT:DC:NPLC 1')
     # multimeter.send_msg('FETCH?')
     # multimeter.receive_msg()
     # multimeter.send_and_read('FETCH?')
     print(multimeter.read_device_info())
     print('\n')
-    
-    
     source = DrvScpiHandlerC(port = '/dev/ttyACM0', separator = '\n', baudrate = 9600)
-    print(f"source")
+    print("source")
     # source.send_msg('SYSTem:LOCK: ON')
     # source.send_msg('SYSTem:LOCK: OFF')
     # source.send_and_read('MEASure:VOLTage?')
@@ -52,19 +53,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-
-
-########## EXAMPLE COMMAND DICTIONARY ##########
-'''
-MULTIMETER
-- Send medium value: 'VOLT:DC:NPLC 1'
-- Send slow value: 'VOLT:DC:NPLC 10'
-- Send fast value: 'VOLT:DC:NPLC 0.1'
-
-SOURCE
-- LOCK ON:  'SYSTem:LOCK: ON'
-- LOCK OFF: 'SYSTem:LOCK: OFF'
-- Voltaje measure: 'MEASure:VOLTage?'
-- Corriente measure: 'MEASure:CURRent?'
-'''
+    example()

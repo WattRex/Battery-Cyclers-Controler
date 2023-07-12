@@ -7,15 +7,16 @@ Driver for SCPI devices.
 """
 
 #######################        MANDATORY IMPORTS         #######################
-import sys, os
+import sys
+import os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from sys.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys_abs.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./sys/sys_log/logginConfig.conf')
-log = SYS_LOG_LoggerGetModuleLogger(__name__, config_by_module_filename="./log_config.yaml")
+    cycler_logger = SYS_LOG_Logger_c('./sys_abs/SysLogLoggerC/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
 from typing import List
@@ -30,19 +31,19 @@ import serial
 
 
 #######################              ENUMS               #######################
-class _DefaultSerialParamsC():
+class _DefaultSerialParamsC:
     "Communication constants"
-    BAUD_RATE           = 115200
-    BYTESIZE            = serial.EIGHTBITS
-    PARITY              = serial.PARITY_NONE
-    STOP_BITS           = serial.STOPBITS_ONE
-    READ_TIMEOUT        = 0.5
-    WRITE_TIMEOUT       = 0.5
-    INTER_BYTE_TIMEOUT  = 0.5
-    MAX_LEN_IN_BYTES    = 21
+    _BAUD_RATE           = 115200
+    _BYTESIZE            = serial.EIGHTBITS
+    _PARITY              = serial.PARITY_NONE
+    _STOP_BITS           = serial.STOPBITS_ONE
+    _READ_TIMEOUT        = 0.5
+    _WRITE_TIMEOUT       = 0.5
+    _INTER_BYTE_TIMEOUT  = 0.5
+    _MAX_LEN_IN_BYTES    = 21
 
 #######################             CLASSES              #######################
-class DrvScpiErrorC():
+class DrvScpiErrorC:
     '''Error class for SCPI driver.
     '''
     def __init__(self, message: str, error_code: int) -> None:
@@ -53,19 +54,28 @@ class DrvScpiErrorC():
         return f"Error: {self.message} \t Code: {self.error_code}"
 
 
-class DrvScpiHandlerC():
+class DrvScpiHandlerC:
     '''Driver for SCPI devices.
     '''
-    def __init__(self, port: str, separator: str, baudrate: int = _DefaultSerialParamsC.BAUD_RATE, bytesize = _DefaultSerialParamsC.BYTESIZE,
-                 parity = _DefaultSerialParamsC.PARITY, stopbits = _DefaultSerialParamsC.STOP_BITS, timeout = _DefaultSerialParamsC.READ_TIMEOUT,
-                 write_timeout = _DefaultSerialParamsC.WRITE_TIMEOUT, inter_byte_timeout = _DefaultSerialParamsC.INTER_BYTE_TIMEOUT) -> None:
-         
-        self.__serial: serial.Serial = serial.Serial(port = port, baudrate = baudrate, bytesize = bytesize, parity = parity, stopbits = stopbits,
-                                                     timeout = timeout, write_timeout = write_timeout, inter_byte_timeout = inter_byte_timeout)
+    def __init__(self, port: str, separator: str, baudrate: int = _DefaultSerialParamsC._BAUD_RATE,
+                 bytesize = _DefaultSerialParamsC._BYTESIZE,
+                 parity = _DefaultSerialParamsC._PARITY,
+                 stopbits = _DefaultSerialParamsC._STOP_BITS,
+                 timeout = _DefaultSerialParamsC._READ_TIMEOUT,
+                 write_timeout = _DefaultSerialParamsC. _WRITE_TIMEOUT,
+                 inter_byte_timeout = _DefaultSerialParamsC._INTER_BYTE_TIMEOUT) -> None:
+        self.__serial: serial.Serial = serial.Serial(port = port,
+                                                     baudrate = baudrate,
+                                                     bytesize = bytesize,
+                                                     parity = parity, 
+                                                     topbits = stopbits,
+                                                     timeout = timeout,
+                                                     write_timeout = write_timeout,
+                                                     inter_byte_timeout = inter_byte_timeout)
         self.__separator: str = separator
 
 
-    def decode_numbers(self, data: bytes) -> List[int]:
+    def decode_numbers(self, data: bytes) -> List[float]:
         '''Decode bytes to integers.
         Args:
             - data (bytes): Value to decode
@@ -77,9 +87,10 @@ class DrvScpiHandlerC():
         data = data.decode('utf-8')
         msg_decode = data.split(f"{self.__separator}")
         try:
-            msg_decode = [int(i) for i in msg_decode]
-        except ValueError:
-            raise DrvScpiErrorC(message = "Error decoding data", error_code = 2)
+            msg_decode = [float(i) for i in msg_decode]
+        except ValueError as exc:
+            result = DrvScpiErrorC(message = "Error decoding data", error_code = 2)
+            raise ValueError(result) from exc
         return msg_decode
 
 
@@ -108,7 +119,8 @@ class DrvScpiHandlerC():
         '''
         msg = self.send_and_read('*IDN?')
         if len(msg) == 0:
-            raise DrvScpiErrorC(message = "Error reading device information", error_code = 1)
+            result = DrvScpiErrorC(message = "Error reading device information", error_code = 1)
+            raise ValueError(result)
         else:
             return msg
 
@@ -128,11 +140,11 @@ class DrvScpiHandlerC():
 
     def receive_msg(self) -> List[str]:
         '''
-        Receive a message from the serial port in blocking mode.
+        Read until an separator is found, the size is exceeded or until timeout occurs. 
         Args:
             - None
         Returns:
-            - msg_decoded (List[str]): Received message.
+            - msg_decoded (List[str]): Received message of the device.
         Raises:
             - None
         '''
