@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-"""Copy the attributes of the shared object into the shared object .
-
-Raises:
-    SYS_SHD_Chan_Error_c: [description]
-    SYS_SHD_Chan_Error_c: [description]
-
-Returns:
-    [type]: [description]
+"""
+This module will manage the shared objects.
+It will lock the shared object in order to change it savely,
+for each channel.
 """
 
 #######################        MANDATORY IMPORTS         #######################
@@ -30,6 +26,9 @@ from typing import List
 
 #######################      LOGGING CONFIGURATION       #######################
 from sys_abs.sys_log import sys_log_logger_get_module_logger
+if __name__ == '__main__':
+    from sys_abs.sys_log import SysLogLoggerC
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
 log = sys_log_logger_get_module_logger(__name__)
 #######################              ENUMS               #######################
 
@@ -240,7 +239,7 @@ def _merge_class(dst_obj : object, src_obj : object, attribs : List[str]) -> Non
         to achieve the nested attributes to be copied.
 
     Raises:
-        SYS_SHD_Chan_Error_c: Throw an exception if the attribute doesn't exists.
+        SysShdChanErrorC: Throw an exception if the attribute doesn't exists.
     '''
     if hasattr(dst_obj, attribs[0]) and hasattr(src_obj, attribs[0]):
         old_inst = getattr(dst_obj, attribs[0])

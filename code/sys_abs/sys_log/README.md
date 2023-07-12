@@ -8,15 +8,20 @@
 ## Code to paste on top after imports of the main.py file
 
 ```
-from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
-cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
-log = sys_log_logger_get_module_logger(__name__, './log_config.yaml')
+from sys_abs.sys_log import sys_log_logger_get_module_logger
+if __name__ == '__main__':
+    from sys_abs.sys_log import SysLogLoggerC
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__)
 ```
 
 ## Code to paste on top after imports of every .py file
 
 ```
 from sys_abs.sys_log import sys_log_logger_get_module_logger
+if __name__ == '__main__':
+    from sys_abs.sys_log import SysLogLoggerC
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
 log = sys_log_logger_get_module_logger(__name__)
 ```
 
