@@ -276,7 +276,7 @@
         <type id="Class:di04826126ae7342d197787703ead1ba195698" name="DrvPwrStatusC" class-ref="di04826126ae7342d197787703ead1ba195698" />
         <type id="Class:062db154a441474690c6b0a1f57b74c1" name="MidDataProfile" class-ref="062db154a441474690c6b0a1f57b74c1" />
         <type id="Class:dia858f67632b844c2927bbf19e3d328de3088" name="DRV_BK_Mode_e" class-ref="dia858f67632b844c2927bbf19e3d328de3088" />
-        <type id="Class:di93bb7e2b845145fd90eda841deeae5137596" name="SYS_SHD_Chan_c" class-ref="di93bb7e2b845145fd90eda841deeae5137596" />
+        <type id="Class:di93bb7e2b845145fd90eda841deeae5137596" name="SysShdChanC" class-ref="di93bb7e2b845145fd90eda841deeae5137596" />
         <type id="Class:dieffed73c069a46ba8b56be643176419e9124" name="DRV_EA_Device_c" class-ref="dieffed73c069a46ba8b56be643176419e9124" />
         <type id="Class:5d053ec546cb4fa8b2ba359a27487c5f" name="DrvEpcDataC" class-ref="5d053ec546cb4fa8b2ba359a27487c5f" />
         <type id="Class:di58dc7eb0e31a4432ad15c5defc7204459124" name="DrvEaModeModeE" class-ref="di58dc7eb0e31a4432ad15c5defc7204459124" />
@@ -713,7 +713,7 @@
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="SYS_SHD_Chan_c" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
+      <structural-feature type="SysShdChanC" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
     </item>
     <item id="cd9dd9c295294ce7a12f7a1862b67b60" cid="PROP344" type="property" owner="baf57409538e4fa18390300af10e5912" creation-date="07/11/2023 11:37:17" visibility="private">
       <structural-feature type="DRV_EA_Device_c" type-id="Class:58095b9d072f4fd99c0f1be828becb82" />
@@ -1330,7 +1330,7 @@ Qué se hace con el código de error?</comment>
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="SYS_SHD_Chan_c" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
+      <structural-feature type="SysShdChanC" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
       <property redefines="di82ba6de569ce4dcb89938e6d754ff6fb7850" />
     </item>
     <item id="di546be49f9c264b51aec443d5172ab0ec8956" cid="ELEM019" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
@@ -3592,7 +3592,7 @@ Qué se hace con el código de error?</comment>
                               <tagged-value id="tv55bd833bc51b4ada857ad1f58665a131" name="set_mask" type="reference" multiple="false" hidden="false" ref="di25e82e92b83d4bc6992f3bbc7edb78362441" />
                             </tagged-values>
                           </parameter>
-                          <parameter id="pb7c1eca005714d8f8fbe780173d6ed10" name="chan" type="SYS_SHD_Chan_c" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596">
+                          <parameter id="pb7c1eca005714d8f8fbe780173d6ed10" name="chan" type="SysShdChanC" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596">
                             <tagged-values>
                               <tagged-value id="tv19e6daff467c4dd6b13d958a07ef905e" name="set_chan" type="reference" multiple="false" hidden="false" ref="f07f7781ed7d46298b0a9842383e1bea" />
                             </tagged-values>
@@ -3766,7 +3766,7 @@ Qué se hace con el código de error?</comment>
                       <operation id="o877eb8202c6c4af8b0ab97aebf915bf3733" cid="OP080" name="DrvEpcDevicesC" creation-date="07/11/2023 14:08:04" type="" type-id="" visibility="public">
                         <parameters>
                           <parameter id="pac2f8d0b7f024da6932ef30145f31fe5" name="DevId" type="int" type-id="Python.int" />
-                          <parameter id="p5c2b4afc0fc44f81a9f7134be4094bda" name="DeviceHandler" type="SYS_SHD_Chan_c" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
+                          <parameter id="p5c2b4afc0fc44f81a9f7134be4094bda" name="DeviceHandler" type="SysShdChanC" type-id="Class:di93bb7e2b845145fd90eda841deeae5137596" />
                         </parameters>
                         <stereotypes>
                           <stereotype>create</stereotype>
@@ -8393,7 +8393,7 @@ Qué se hace con el código de error?</comment>
                   </item>
                 </layer>
               </diagram>
-              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="7" overview-order-index="5" uid="" name-style="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1084,-723" zoom="0.8">
+              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="7" overview-order-index="5" uid="" name-style="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1257,-803" zoom="0.8">
                 <style>
                   <background-color index="1" color="#FFFFFFFF" />
                   <background-color index="2" color="#FFFFFFFF" />
@@ -9189,13 +9189,13 @@ Qué se hace con el código de error?</comment>
                   <item id="a9399fdcb23a405881835b6d5bd60561" cid="PKG016" type="package" name="sys_shd" change-tracking-state="added" creation-date="09/23/2022 08:49:42" visibility="undefined">
                     <owned-items />
                   </item>
-                  <item id="di93bb7e2b845145fd90eda841deeae5137596" cid="C014" type="class" name="SYS_SHD_Chan_c" owner="a9399fdcb23a405881835b6d5bd60561" change-tracking-state="changed" creation-date="03/03/2022 12:32:21" visibility="undefined">
+                  <item id="di93bb7e2b845145fd90eda841deeae5137596" cid="C014" type="class" name="SysShdChanC" owner="a9399fdcb23a405881835b6d5bd60561" change-tracking-state="changed" creation-date="03/03/2022 12:32:21" visibility="undefined">
                     <tagged-values>
                       <tagged-value id="tv3265a25fd0c24e92896127ea2a9569c4" name="namespace" type="text" multiple="false" hidden="false" value="" />
                       <tagged-value id="tv31fcb1e39df8450a9f3d86b9f8feba15" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="DRV_UTILS_Chan_c" />
                     </tagged-values>
                     <operations>
-                      <operation id="o69e91767a5ed49088f271dd0a5a4e1f9371" cid="OP068" name="SYS_SHD_Chan_c" creation-date="03/09/2022 09:54:33" type="" type-id="" visibility="public">
+                      <operation id="o69e91767a5ed49088f271dd0a5a4e1f9371" cid="OP068" name="SysShdChanC" creation-date="03/09/2022 09:54:33" type="" type-id="" visibility="public">
                         <parameters>
                           <parameter id="p168fbd180bc548ac9fea9ce7ddb0b12b" name="maxsize" type="int" type-id="Python.int" direction="In">
                             <documentations>
@@ -9300,7 +9300,7 @@ Qué se hace con el código de error?</comment>
                           <source-code language="ActionScript" />
                         </source-codes>
                       </operation>
-                      <operation id="o12199357054e44989d21725ec723f597493" cid="OP034" name="deleteUntilLast" creation-date="03/03/2022 12:32:21" type="" type-id="" visibility="public">
+                      <operation id="o12199357054e44989d21725ec723f597493" cid="OP034" name="delete_until_last" creation-date="03/03/2022 12:32:21" type="" type-id="" visibility="public">
                         <documentations>
                           <doc id="896ba305b449485fbc17766b1dfe73f7">
                             <text>
@@ -9360,7 +9360,7 @@ Qué se hace con el código de error?</comment>
 </source-code>
                         </source-codes>
                       </operation>
-                      <operation id="o3f2f58fcd7f74ff38566b06aca1a4419371" cid="OP069" name="receiveData" creation-date="03/09/2022 09:54:33" type="object" type-id="Python.object" visibility="public">
+                      <operation id="o3f2f58fcd7f74ff38566b06aca1a4419371" cid="OP069" name="receive_data" creation-date="03/09/2022 09:54:33" type="object" type-id="Python.object" visibility="public">
                         <documentations>
                           <doc id="d66e53326b2e40129a91e4c48a0586f7">
                             <text>
@@ -11655,7 +11655,7 @@ Qué se hace con el código de error?</comment>
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-component" id="pc944c9be78ae4cde9c38e9d945ed18bc_456459804" name="ProjectStructure" order-index="2" overview-order-index="0" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-76,7" zoom="0.6">
+      <diagram type="uml-component" id="pc944c9be78ae4cde9c38e9d945ed18bc_456459804" name="ProjectStructure" order-index="2" overview-order-index="0" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-60,0" zoom="0.6">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
