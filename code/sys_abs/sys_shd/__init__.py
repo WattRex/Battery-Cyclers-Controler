@@ -1,3 +1,7 @@
-from .SYS_SHD import SYS_SHD_Chan_c, SYS_SHD_Shared_Obj_c, SYS_SHD_Chan_Error_c
+"""
+This file specifies what is going to be exported from this module.
+In this case is sys_shd.
+"""
+from .sys_shd import SysShdChanC, SysShdSharedObjC, SysShdChanErrorC
 
-__all__= ['SYS_SHD_Chan_c', 'SYS_SHD_Shared_Obj_c', 'SYS_SHD_Chan_Error_c']
+__all__= ['SysShdChanC', 'SysShdSharedObjC', 'SysShdChanErrorC']
