@@ -12,10 +12,10 @@ import os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from sys_abs.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./sys_abs/SysLogLoggerC/logginConfig.conf')
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/loggingConfig.conf')
 log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################

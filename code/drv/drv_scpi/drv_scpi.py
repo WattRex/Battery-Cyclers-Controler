@@ -12,10 +12,10 @@ import os
 sys.path.append(os.getcwd())  #get absolute path
 
 #######################      LOGGING CONFIGURATION       #######################
-from sys_abs.sys_log import SYS_LOG_Logger_c, SYS_LOG_LoggerGetModuleLogger
+from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
 
 if __name__ == '__main__':
-    cycler_logger = SYS_LOG_Logger_c('./sys_abs/SysLogLoggerC/logginConfig.conf')
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/loggingConfig.conf')
 log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
@@ -43,7 +43,7 @@ class _DefaultSerialParamsC:
     _MAX_LEN_IN_BYTES    = 21
 
 #######################             CLASSES              #######################
-class DrvScpiErrorC:
+class DrvScpiErrorC(Exception):
     '''Error class for SCPI driver.
     '''
     def __init__(self, message: str, error_code: int) -> None:
@@ -89,8 +89,7 @@ class DrvScpiHandlerC:
         try:
             msg_decode = [float(i) for i in msg_decode]
         except ValueError as exc:
-            result = DrvScpiErrorC(message = "Error decoding data", error_code = 2)
-            raise ValueError(result) from exc
+            raise DrvScpiErrorC(message = "Error decoding data", error_code = 2) from exc
         return msg_decode
 
 
@@ -119,8 +118,7 @@ class DrvScpiHandlerC:
         '''
         msg = self.send_and_read('*IDN?')
         if len(msg) == 0:
-            result = DrvScpiErrorC(message = "Error reading device information", error_code = 1)
-            raise ValueError(result)
+            raise DrvScpiErrorC(message = "Error reading device information", error_code = 1)
         else:
             return msg
 
