@@ -12,7 +12,7 @@ from .drv_db_engine import DrvDbSqlEngineC
 from .drv_db_types import DrvDbCyclingModeE, DrvDbEquipStatusE, DrvDbExpStatusE, \
                         DrvDbCyclingLimitE, DrvDbMembraneTypeE, DrvDbElectrolyteTypeE, \
                         DrvDbBatteryTechE, DrvDbBipolarTypeE, DrvDbDeviceTypeE, \
-                        DrvDbLeadAcidChemistryE, DrvDbLithiumChemistryE
+                        DrvDbLeadAcidChemistryE, DrvDbLithiumChemistryE, DrvDbAvailableCuE
 
 __all__ = [
     "DrvDbAlarmC", "DrvDbBatteryC", "DrvDbCompatibleDeviceC", "DrvDbComputationalUnitC", \
@@ -22,5 +22,5 @@ __all__ = [
     "DrvDbUsedDeviceC", "DrvDbSqlEngineC", "DrvDbCyclingModeE", "DrvDbEquipStatusE", \
     "DrvDbExpStatusE", "DrvDbCyclingLimitE", "DrvDbMembraneTypeE", "DrvDbElectrolyteTypeE", \
     "DrvDbBatteryTechE", "DrvDbBipolarTypeE", "DrvDbDeviceTypeE", "DrvDbLeadAcidChemistryE", \
-    "DrvDbLithiumChemistryE"
+    "DrvDbLithiumChemistryE", "DrvDbAvailableCuE"
 ]
