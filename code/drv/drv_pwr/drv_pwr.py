@@ -1,34 +1,33 @@
 #!/usr/bin/python3
-
-# -*- coding: utf-8 -*-
-
-"""
+'''
 Driver for power devices.
-"""
-
+'''
 #######################        MANDATORY IMPORTS         #######################
 from __future__ import annotations
 import sys
 import os
 
-#######################      LOGGING CONFIGURATION       #######################
-# from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
-
-# if __name__ == '__main__':
-#     cycler_logger = SysLogLoggerC('./sys_abs/sys_log/loggingConfig.conf')
-# log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
-
 #######################         GENERIC IMPORTS          #######################
-from enum import Enum
+
+
 #######################       THIRD PARTY IMPORTS        #######################
+from enum import Enum
 
-#######################          MODULE IMPORTS          #######################
+#######################      LOGGING CONFIGURATION       #######################
+from sys_abs.sys_log import sys_log_logger_get_module_logger
+if __name__ == '__main__':
+    from sys_abs.sys_log import SysLogLoggerC
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__)
 
+sys.path.append(os.getcwd())  #get absolute path
 
 #######################          PROJECT IMPORTS         #######################
 from drv.drv_scpi import DrvScpiHandlerC
 
-sys.path.append(os.getcwd())  #get absolute path
+#######################          MODULE IMPORTS          #######################
+
+
 #######################              ENUMS               #######################
 class DrvPwrStatusE(Enum):
     '''Status of the driver power.
@@ -43,20 +42,21 @@ class DrvPwrStatusC:
     '''
     def __init__(self, error: int|DrvPwrStatusE) -> None:
         if isinstance(error, DrvPwrStatusE):
-            self.status = error
+            self.__status = error
             self.__error_code = error.value
         else:
             self.__error_code = error
             if error > 0:
-                self.status = DrvPwrStatusE.INTERNAL_ERROR
+                self.__status = DrvPwrStatusE.INTERNAL_ERROR
             else:
-                self.status = DrvPwrStatusE(error)
+                self.__status = DrvPwrStatusE(error)
 
     def __str__(self) -> str:
-        result = f"Error code: {self.__error_code} \t Status: {self.status}"
+        result = f"Error code: {self.__error_code} \t Status: {self.__status}"
         return result
-    def __eq__(self, other) -> bool:
-        return self.error_code == other.error_code and self.status == other.status
+
+    def __eq__(self, __o: Enum) -> bool:
+        return self.__status == __o
 
     @property
     def error_code(self) -> int:
