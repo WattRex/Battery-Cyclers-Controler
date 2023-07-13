@@ -8,19 +8,19 @@ import sys
 import os
 
 #######################         GENERIC IMPORTS          #######################
-
+from typing import Any
 
 #######################       THIRD PARTY IMPORTS        #######################
 from enum import Enum
 
-#######################      LOGGING CONFIGURATION       #######################
+#######################      SYSTEM ABSTRACTION IMPORTS  #######################
+sys.path.append(os.getcwd())  #get absolute path
 from sys_abs.sys_log import sys_log_logger_get_module_logger
 if __name__ == '__main__':
     from sys_abs.sys_log import SysLogLoggerC
     cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
 log = sys_log_logger_get_module_logger(__name__)
 
-sys.path.append(os.getcwd())  #get absolute path
 
 #######################          PROJECT IMPORTS         #######################
 from drv.drv_scpi import DrvScpiHandlerC
@@ -55,8 +55,8 @@ class DrvPwrStatusC:
         result = f"Error code: {self.__error_code} \t Status: {self.__status}"
         return result
 
-    def __eq__(self, __o: Enum) -> bool:
-        return self.__status == __o
+    def __eq__(self, cmp_obj: Enum) -> bool:
+        return self.__status == cmp_obj
 
     @property
     def error_code(self) -> int:
@@ -80,7 +80,7 @@ class DrvPwrStatusC:
         Raises:
             - None
         '''
-        return self.status.value
+        return self.__status.value
 
     @property
     def name(self) -> str:
@@ -92,7 +92,7 @@ class DrvPwrStatusC:
         Raises:
             - None
         '''
-        return self.status.name
+        return self.__status.name
 
 
 class DrvPwrPropertiesC:
@@ -123,7 +123,7 @@ class DrvPwrDataC:
 class DrvPwrDeviceC:
     '''Representation of power devices.
     '''
-    def __init__(self, handler: DrvScpiHandlerC) -> None:
+    def __init__(self, handler: Any) -> None:
         self.__device_handler: DrvScpiHandlerC  = handler
         self.__current_data: DrvPwrDataC|None        = None
         self.__properties: DrvPwrPropertiesC|None   = None
