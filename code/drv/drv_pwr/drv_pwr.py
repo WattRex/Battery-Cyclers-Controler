@@ -124,9 +124,9 @@ class DrvPwrDeviceC:
     '''Representation of power devices.
     '''
     def __init__(self, handler: Any) -> None:
-        self.__device_handler: DrvScpiHandlerC  = handler
-        self.__current_data: DrvPwrDataC|None        = None
-        self.__properties: DrvPwrPropertiesC|None   = None
+        self.__device_handler: Any = handler
+        self.__current_data: DrvPwrDataC|None = None
+        self.__properties: DrvPwrPropertiesC|None = None
 
 
     def get_data(self) -> DrvPwrDataC|None:
