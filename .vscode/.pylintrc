@@ -293,7 +293,9 @@ single-line-class-stmt=no
 # else.
 single-line-if-stmt=no
 
-disable=logging-fstring-interpolation
+disable=logging-fstring-interpolation,
+        wrong-import-position,
+        broad-exception-caught
 
 [LOGGING]
 
