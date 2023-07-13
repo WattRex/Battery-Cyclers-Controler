@@ -7,6 +7,7 @@ Driver for power devices.
 """
 
 #######################        MANDATORY IMPORTS         #######################
+from __future__ import annotations
 import sys
 import os
 
@@ -19,7 +20,6 @@ import os
 
 #######################         GENERIC IMPORTS          #######################
 from enum import Enum
-
 #######################       THIRD PARTY IMPORTS        #######################
 
 #######################          MODULE IMPORTS          #######################
@@ -98,10 +98,11 @@ class DrvPwrStatusC:
 class DrvPwrPropertiesC:
     '''Properties of the driver power.
     '''
-    def __init__(self, model: str = None, serial_number: str = None, max_volt_limit: int = 0,
-                 max_current_limit: int = 0, max_power_limit: int = 0) -> None:
-        self.model: str = model
-        self.serial_number: str = serial_number
+    def __init__(self, model: str|None = None, serial_number: str|None = None,\
+                 max_volt_limit: int = 0, max_current_limit: int = 0,\
+                 max_power_limit: int = 0) -> None:
+        self.model: str|None = model
+        self.serial_number: str|None = serial_number
         self.max_volt_limit: int = max_volt_limit
         self.max_current_limit: int = max_current_limit
         self.max_power_limit: int = max_power_limit
@@ -110,10 +111,10 @@ class DrvPwrPropertiesC:
 class DrvPwrDataC:
     '''Device data storage.
     '''
-    def __init__(self,  status: DrvPwrStatusC, mode, voltage: int,
+    def __init__(self,  status: DrvPwrStatusC, mode: Enum, voltage: int,
                  current: int, power: int) -> None:
         self.status: DrvPwrStatusC = status
-        self.mode = mode #TODO: No está seguro que hacer con el aún
+        self.mode: Enum = mode
         self.voltage: int = voltage
         self.current: int = current
         self.power: int = power
@@ -124,11 +125,11 @@ class DrvPwrDeviceC:
     '''
     def __init__(self, handler: DrvScpiHandlerC) -> None:
         self.__device_handler: DrvScpiHandlerC  = handler
-        self.__current_data: DrvPwrDataC        = None
-        self.__properties: DrvPwrPropertiesC    = None
+        self.__current_data: DrvPwrDataC|None        = None
+        self.__properties: DrvPwrPropertiesC|None   = None
 
 
-    def get_data(self) -> DrvPwrDataC:
+    def get_data(self) -> DrvPwrDataC|None:
         '''Obtain ...
         Args:
             - None
@@ -140,7 +141,7 @@ class DrvPwrDeviceC:
         return self.__current_data
 
 
-    def get_properties(self) -> DrvPwrPropertiesC:
+    def get_properties(self) -> DrvPwrPropertiesC|None:
         '''Obtain ...
         Args:
             - None
