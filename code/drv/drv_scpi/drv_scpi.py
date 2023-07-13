@@ -1,22 +1,10 @@
 #!/usr/bin/python3
-
-# -*- coding: utf-8 -*-
-
-"""
+'''
 Driver for SCPI devices.
-"""
-
+'''
 #######################        MANDATORY IMPORTS         #######################
 import sys
 import os
-sys.path.append(os.getcwd())  #get absolute path
-
-#######################      LOGGING CONFIGURATION       #######################
-from sys_abs.sys_log import SysLogLoggerC, sys_log_logger_get_module_logger
-
-if __name__ == '__main__':
-    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/loggingConfig.conf')
-log = sys_log_logger_get_module_logger(__name__, config_by_module_filename="./log_config.yaml")
 
 #######################         GENERIC IMPORTS          #######################
 from typing import List
@@ -24,11 +12,19 @@ import serial
 
 #######################       THIRD PARTY IMPORTS        #######################
 
-#######################          MODULE IMPORTS          #######################
+#######################      SYSTEM ABSTRACTION IMPORTS  #######################
+sys.path.append(os.getcwd()+'\\code')  #get absolute path
+from sys_abs.sys_log import sys_log_logger_get_module_logger
+if __name__ == '__main__':
+    from sys_abs.sys_log import SysLogLoggerC
+    cycler_logger = SysLogLoggerC('./sys_abs/sys_log/logginConfig.conf')
+log = sys_log_logger_get_module_logger(__name__)
 
 
 #######################          PROJECT IMPORTS         #######################
 
+
+#######################          MODULE IMPORTS          #######################
 
 #######################              ENUMS               #######################
 class _DefaultSerialParamsC:
@@ -68,7 +64,7 @@ class DrvScpiHandlerC:
                                                      baudrate = baudrate,
                                                      bytesize = bytesize,
                                                      parity = parity, 
-                                                     topbits = stopbits,
+                                                     stopbits = stopbits,
                                                      timeout = timeout,
                                                      write_timeout = write_timeout,
                                                      inter_byte_timeout = inter_byte_timeout)
@@ -84,8 +80,8 @@ class DrvScpiHandlerC:
         Raises:
             - DrvScpiErrorC: Error decoding data.
         '''
-        data = data.decode('utf-8')
-        msg_decode = data.split(f"{self.__separator}")
+        data_dec = data.decode('utf-8')
+        msg_decode = data_dec.split(f"{self.__separator}")
         try:
             msg_decode = [float(i) for i in msg_decode]
         except ValueError as exc:
@@ -102,8 +98,8 @@ class DrvScpiHandlerC:
         Raises:
             - None
         '''
-        data = data.decode('utf-8')
-        msg_decode = data.split(f"{self.__separator}")
+        data_dec = data.decode('utf-8')
+        msg_decode = data_dec.split(f"{self.__separator}")
         return msg_decode
 
 
@@ -146,7 +142,7 @@ class DrvScpiHandlerC:
         Raises:
             - None
         '''
-        msg = self.__serial.read_until(self.__separator)
+        msg = self.__serial.readall()
         msg_decoded = self.decode_and_split(msg)
         return msg_decoded
 
