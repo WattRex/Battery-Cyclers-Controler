@@ -5,7 +5,7 @@
     <authors> </authors>
     <description />
   </meta>
-  <counters models="6">
+  <counters models="7">
     <entity-names>
       <counter>
         <item-type type-id="package" type="Package" />
@@ -226,11 +226,10 @@
     <to-dos />
   </management>
   <glossary id="glsr-15537bec6aa54e53b6bb9bf6cb1169b9" />
-  <types default="UML">
+  <types default="MySQL">
     <type-sets>
       <type-set file="MySqlTypes.xml" />
       <type-set file="Python.xml" />
-      <type-set file="UmlTypes.xml" />
     </type-sets>
     <custom-types>
       <parameters />
@@ -247,9 +246,7 @@
         <type id="Class:d8919b2da14e4f8aae65c57461b079b6" name="MidDataInstructionC" class-ref="d8919b2da14e4f8aae65c57461b079b6" />
         <type id="Class:di116f34e82bb64559a9aeedceecd72ab15430" name="DRV_PWR_Measures_c" class-ref="di116f34e82bb64559a9aeedceecd72ab15430" />
         <type id="Class:di2abc4496d4a140e9aae1b676856e66d13913" name="DrvCanFilterC" class-ref="di2abc4496d4a140e9aae1b676856e66d13913" />
-        <type id="String" name="String" />
         <type id="Class:di1a419738c9834c7b93d45bf84e2ed5a48518" name="DrvRsDeviceC" class-ref="di1a419738c9834c7b93d45bf84e2ed5a48518" />
-        <type id="Boolean" name="Boolean" />
         <type id="Class:dif6b089aee4d040b1aed20e676482daaf8518" name="DRV_RS_Properties_c" class-ref="dif6b089aee4d040b1aed20e676482daaf8518" />
         <type id="Class:f4756779010447738bd4900eca258469" name="DrvBkDataC" class-ref="f4756779010447738bd4900eca258469" />
         <type id="Class:di1d43ffa8f3d042a5aa2199e5934f457a5430" name="DrvEaDataC" class-ref="di1d43ffa8f3d042a5aa2199e5934f457a5430" />
@@ -259,10 +256,10 @@
         <type id="Class:6b135ac57b3642f0ac0798b4a2f5b559" name="MidDataGenMeasC" class-ref="6b135ac57b3642f0ac0798b4a2f5b559" />
         <type id="int (MySql.int)" name="int (MySql.int)" />
         <type id="Class:di903bdc66973343d1b31dde5c914d985e2312" name="drv_rs" class-ref="di903bdc66973343d1b31dde5c914d985e2312" />
-        <type id="Python.Enum" name="Python.Enum" template="{{Python.Enum}}" />
+        <type id="Python.Enum" name="Enum" template="{{Python.Enum}}" />
         <type id="Class:303be3cbe0f84a89b09017784c714ccd" name="DrvEpcModeE" class-ref="303be3cbe0f84a89b09017784c714ccd" />
         <type id="Class:di3f1173a556014bcb8a71995de064eadc7850" name="DrvPwrPropertiesC" class-ref="di3f1173a556014bcb8a71995de064eadc7850" />
-        <type id="Python.bool" name="Python.bool" />
+        <type id="Python.bool" name="bool" />
         <type id="Class:di70ca4bf9f69841bd954db888945ebb578407" name="MidDataPwrRangeC" class-ref="di70ca4bf9f69841bd954db888945ebb578407" />
         <type id="Class:di552ff51f0de44c8d9e5d8d894ba0a7fe5430" name="DrvEaPropertiesC" class-ref="di552ff51f0de44c8d9e5d8d894ba0a7fe5430" />
         <type id="Class:810c85d8b38345d5aa14da3d0319735c" name="MidDataExperimentC" class-ref="810c85d8b38345d5aa14da3d0319735c" />
@@ -281,18 +278,19 @@
         <type id="Class:c85cff38728f4541b229235ee8f82082" name="DrvBkPropertiesC" class-ref="c85cff38728f4541b229235ee8f82082" />
         <type id="Class:dideb76258a8704f56ab70dcfb2aea79124955" name="DRV_EA_Properties_c" class-ref="dideb76258a8704f56ab70dcfb2aea79124955" />
         <type id="Class:di2b54705cd02143bc86dd5919a175eb066328" name="app_diag" class-ref="di2b54705cd02143bc86dd5919a175eb066328" />
+        <type id="Any" name="Any" />
         <type id="varchar (MySql.varchar)" name="varchar (MySql.varchar)" />
         <type id="Class:di39e105aacabc4bba9c2dfe17b9ab92965851" name="drv_can" class-ref="di39e105aacabc4bba9c2dfe17b9ab92965851" />
         <type id="Class:0c349928e3684e698259a31941d160a5" name="MidDataExpStatusE" class-ref="0c349928e3684e698259a31941d160a5" />
         <type id="Class:di9a2c1ed3d52b43d4be4977c5413ee99b7850" name="DRV_PWR_Status_e" class-ref="di9a2c1ed3d52b43d4be4977c5413ee99b7850" />
-        <type id="Python.datetime" tid="datetime" name="Python.datetime" template="{{Python.datetime}}" />
         <type id="Class:di04826126ae7342d197787703ead1ba195698" name="DrvPwrStatusC" class-ref="di04826126ae7342d197787703ead1ba195698" />
+        <type id="Python.datetime" tid="datetime" name="datetime" template="{{Python.datetime}}" />
         <type id="Class:062db154a441474690c6b0a1f57b74c1" name="MidDataProfile" class-ref="062db154a441474690c6b0a1f57b74c1" />
         <type id="Class:dia858f67632b844c2927bbf19e3d328de3088" name="DRV_BK_Mode_e" class-ref="dia858f67632b844c2927bbf19e3d328de3088" />
         <type id="Class:di93bb7e2b845145fd90eda841deeae5137596" name="SysShdChanC" class-ref="di93bb7e2b845145fd90eda841deeae5137596" />
         <type id="Class:dieffed73c069a46ba8b56be643176419e9124" name="DRV_EA_Device_c" class-ref="dieffed73c069a46ba8b56be643176419e9124" />
-        <type id="Class:5d053ec546cb4fa8b2ba359a27487c5f" name="DrvEpcDataCaa" class-ref="5d053ec546cb4fa8b2ba359a27487c5f" />
         <type id="Class:di58dc7eb0e31a4432ad15c5defc7204459124" name="DrvEaModeModeE" class-ref="di58dc7eb0e31a4432ad15c5defc7204459124" />
+        <type id="Class:5d053ec546cb4fa8b2ba359a27487c5f" name="DrvEpcDataCaa" class-ref="5d053ec546cb4fa8b2ba359a27487c5f" />
         <type id="Class:969ede89770640988867a47fc8b4d02a" name="DrvEaDeviceC" class-ref="969ede89770640988867a47fc8b4d02a" />
         <type id="Class:dibba2fb20c4734226ae421e7d4a55ae052522" name="DrvBkModeE" class-ref="dibba2fb20c4734226ae421e7d4a55ae052522" />
         <type id="Class:di8cbeb6f307dc4875b534e25d77153b7a5871" name="MidDataPwrLimitE" class-ref="di8cbeb6f307dc4875b534e25d77153b7a5871" />
@@ -302,19 +300,15 @@
         <type id="Class:465ddf0bdb6c400ab990a73a760aaa45" name="DrvEpcDevicesC" class-ref="465ddf0bdb6c400ab990a73a760aaa45" />
         <type id="Class:57a54de4aee6428b91c2ff77dc6b0859" name="mid_pwr" class-ref="57a54de4aee6428b91c2ff77dc6b0859" />
         <type id="Class:81096e31fbff4d1fabf11dabc22b6e45" name="DRV_BK_Properties_c" class-ref="81096e31fbff4d1fabf11dabc22b6e45" />
-        <type id="Dict" name="Dict" />
         <type id="Class:diafa8e8d2b9894dd080ac5a72f371cd735870" name="DRV_uEPC" class-ref="diafa8e8d2b9894dd080ac5a72f371cd735870" />
-        <type id="List" name="List" />
         <type id="Class:di6af6fffda1dd48a89776f3e988d9a2276530" name="DRV_EA_Data_c" class-ref="di6af6fffda1dd48a89776f3e988d9a2276530" />
         <type id="Class:die3a7299fd4494663ad32dbc7a6a1fd2d5166" name="drv_bk" class-ref="die3a7299fd4494663ad32dbc7a6a1fd2d5166" />
-        <type id="Integer" name="Integer" />
         <type id="Class:b10a835783a5437aa07a6bb96c9c8c14" name="DrvCanMessageC" class-ref="b10a835783a5437aa07a6bb96c9c8c14" />
         <type id="Class:1232ca0164384addab2e80e86e0dad84" name="DrvEpcPropertiesC" class-ref="1232ca0164384addab2e80e86e0dad84" />
         <type id="Class:di180be9ab6da8448d86990a0be157a4a81531" name="drv_scpi" class-ref="di180be9ab6da8448d86990a0be157a4a81531" />
-        <type id="Class:58095b9d072f4fd99c0f1be828becb82" name="DRV_EA_Device_c" class-ref="58095b9d072f4fd99c0f1be828becb82" />
         <type id="Class:da616008aa9a4ac2896e159a0fb9f439" name="DrvEpcDataC" class-ref="da616008aa9a4ac2896e159a0fb9f439" />
+        <type id="Class:58095b9d072f4fd99c0f1be828becb82" name="DRV_EA_Device_c" class-ref="58095b9d072f4fd99c0f1be828becb82" />
         <type id="Class:dic8b6ea3e35bb4a869b26eb86954983ef9849" name="MidDataExtMeasC" class-ref="dic8b6ea3e35bb4a869b26eb86954983ef9849" />
-        <type id="DrvCanCmdDataC" name="DrvCanCmdDataC" />
         <type id="Class:2b892ff844e44a61b48f70f00eb777fd" name="DrvPwrDataC" class-ref="2b892ff844e44a61b48f70f00eb777fd" />
         <type id="Class:922c942e1eff4320bf4cdc8773bc8a61" name="DrvPwrDataC" class-ref="922c942e1eff4320bf4cdc8773bc8a61" />
         <type id="Serial" name="Serial" />
@@ -914,7 +908,7 @@
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="Python.datetime" type-id="Python.datetime" />
+      <structural-feature type="datetime" type-id="Python.datetime" />
     </item>
     <item id="e39aab9606574cd4ad5ecbd965f75fea" cid="PROP298" type="property" owner="00d6446ba43642b89a852e73700aaa7e" creation-date="07/10/2023 15:15:27" visibility="private">
       <structural-feature type="DrvBkDataC" type-id="Class:f4756779010447738bd4900eca258469" />
@@ -1001,6 +995,31 @@
     <item id="7d33644658e94eec842c3d0f96c0006b" cid="PROP343" type="property" owner="baf57409538e4fa18390300af10e5912" creation-date="07/11/2023 11:37:17" visibility="private">
       <structural-feature type="DrvEaPropertiesC" type-id="Class:di552ff51f0de44c8d9e5d8d894ba0a7fe5430" />
     </item>
+    <item id="8482d3e0325e4ce4a60c07829c927b3a" cid="PROP275" type="property" name="current" owner="922c942e1eff4320bf4cdc8773bc8a61" creation-date="07/10/2023 13:43:21" visibility="public">
+      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+        <background type="solid" colors="#F2F2F2,#F2F2F2" />
+        <border color="#555555" width="2" />
+        <label-connector color="#80000000" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+            <background type="solid" colors="#203D85,#203D85" />
+            <border color="#203D85" width="2" />
+            <label-connector color="#80000000" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <structural-feature type="int" type-id="Python.int" />
+    </item>
     <item id="di821d285c39b149618a9429b14721c5c34955" cid="PROP121" type="property" name="maxVoltLimit" owner="dideb76258a8704f56ab70dcfb2aea79124955" creation-date="07/10/2023 09:07:25" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -1027,31 +1046,6 @@
       <structural-feature type="int" type-id="Python.int" />
       <property default-value="0" />
     </item>
-    <item id="8482d3e0325e4ce4a60c07829c927b3a" cid="PROP275" type="property" name="current" owner="922c942e1eff4320bf4cdc8773bc8a61" creation-date="07/10/2023 13:43:21" visibility="public">
-      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-        <background type="solid" colors="#F2F2F2,#F2F2F2" />
-        <border color="#555555" width="2" />
-        <label-connector color="#80000000" dash-style="Dash" />
-        <alternate-styles>
-          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-            <background type="solid" colors="#203D85,#203D85" />
-            <border color="#203D85" width="2" />
-            <label-connector color="#80000000" dash-style="Dash" />
-          </alternate-style>
-        </alternate-styles>
-      </style>
-      <structural-feature type="int" type-id="Python.int" />
-    </item>
     <item id="di82ba6de569ce4dcb89938e6d754ff6fb7850" cid="PROP252" type="property" name="__device_handler" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/10/2023 09:17:19" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -1075,6 +1069,7 @@
           </alternate-style>
         </alternate-styles>
       </style>
+      <structural-feature type="Any" type-id="Any" />
     </item>
     <item id="872393d4929e4fa1bc471cef84151de6" cid="PROP056" type="property" owner="ac833c6afd004f1096edfed13dbd6d65" creation-date="07/05/2023 09:33:14" visibility="undefined">
       <structural-feature type="app_man" type-id="Class:die7458004519c4d3e9d0a30105f3628b17063" />
@@ -1221,10 +1216,6 @@ Qué se hace con el código de error?</comment>
       </style>
       <structural-feature type="int" type-id="Python.int" />
     </item>
-    <item id="di0a0efa2e520f4fab812bcb27130eeb7a9017" cid="ELEM048" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
-      <drawing />
-      <drawing-shape type="Rectangle" />
-    </item>
     <item id="8836d151741a43f596207d7736420650" cid="PROP404" type="property" name="status" owner="922c942e1eff4320bf4cdc8773bc8a61" creation-date="07/13/2023 08:31:40" visibility="public">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -1249,6 +1240,10 @@ Qué se hace con el código de error?</comment>
         </alternate-styles>
       </style>
       <structural-feature type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+    </item>
+    <item id="di0a0efa2e520f4fab812bcb27130eeb7a9017" cid="ELEM048" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
+      <drawing />
+      <drawing-shape type="Rectangle" />
     </item>
     <item id="dia04c80da24234e81a4e65fef2344fb5e6530" cid="PROP091" type="property" name="voltage" owner="diee78cf31ab074dbb86d34a1b34c7d40a6530" creation-date="07/05/2023 14:36:05" visibility="public">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
@@ -2331,7 +2326,7 @@ Qué se hace con el código de error?</comment>
           </alternate-style>
         </alternate-styles>
       </style>
-      <structural-feature type="Python.datetime" type-id="Python.datetime" />
+      <structural-feature type="datetime" type-id="Python.datetime" />
     </item>
     <item id="di2b97dc1298d94bd0b260f179b563fbf36549" cid="ELEM064" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -2925,6 +2920,31 @@ Qué se hace con el código de error?</comment>
       </style>
       <structural-feature type="int" type-id="Python.int" />
     </item>
+    <item id="419caf045eb644e6bd66e19b1974e461" cid="PROP363" type="property" name="__properties" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/11/2023 12:42:34" visibility="private">
+      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+        <background type="solid" colors="#F2F2F2,#F2F2F2" />
+        <border color="#555555" width="2" />
+        <label-connector color="#80000000" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+            <background type="solid" colors="#203D85,#203D85" />
+            <border color="#203D85" width="2" />
+            <label-connector color="#80000000" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <structural-feature type="DrvPwrPropertiesC" type-id="Class:di3f1173a556014bcb8a71995de064eadc7850" />
+    </item>
     <item id="dif243e748dcb047519ac47eec60e3889b7850" cid="PROP249" type="property" name="current" owner="di8e04781c56914906acc713379181ae5a7850" creation-date="07/05/2023 14:36:24" visibility="public">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
         <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
@@ -2950,31 +2970,6 @@ Qué se hace con el código de error?</comment>
       </style>
       <structural-feature type="int" type-id="Python.int" />
       <property default-value="0" />
-    </item>
-    <item id="419caf045eb644e6bd66e19b1974e461" cid="PROP363" type="property" name="__properties" owner="di981e1e5fd82846428d6da112ab4c531e7850" creation-date="07/11/2023 12:42:34" visibility="private">
-      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-        <background type="solid" colors="#F2F2F2,#F2F2F2" />
-        <border color="#555555" width="2" />
-        <label-connector color="#80000000" dash-style="Dash" />
-        <alternate-styles>
-          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-            <background type="solid" colors="#203D85,#203D85" />
-            <border color="#203D85" width="2" />
-            <label-connector color="#80000000" dash-style="Dash" />
-          </alternate-style>
-        </alternate-styles>
-      </style>
-      <structural-feature type="DrvPwrPropertiesC" type-id="Class:di3f1173a556014bcb8a71995de064eadc7850" />
     </item>
     <item id="di1fb1692f50f145d0a85f69730b7451bd4839" cid="ELEM040" type="drawing-shape" name="SimpleShape1" change-tracking-state="added" creation-date="09/02/2022 09:34:43">
       <drawing />
@@ -3805,6 +3800,32 @@ Qué se hace con el código de error?</comment>
       <drawing-shape type="Rectangle" />
     </item>
     <item id="e820fa845fa748b987949dedbeb2d3e6" cid="GROUP014" type="group" name="Group" owner="dia3a53a9f66c14135bf8f4538c5e8f05a9501" creation-date="07/05/2023 08:21:25" />
+    <item id="c52fc75995cd46f1b40fe9f20ffe6234" cid="PROP405" type="property" name="mode" owner="922c942e1eff4320bf4cdc8773bc8a61" creation-date="07/13/2023 08:31:55" visibility="public">
+      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
+        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
+        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
+        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
+        <background type="solid" colors="#F2F2F2,#F2F2F2" />
+        <border color="#555555" width="2" />
+        <label-connector color="#80000000" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
+            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
+            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
+            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
+            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
+            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
+            <background type="solid" colors="#203D85,#203D85" />
+            <border color="#203D85" width="2" />
+            <label-connector color="#80000000" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <structural-feature type="Enum" type-id="Python.Enum" />
+      <property derived="true" />
+    </item>
     <item id="d9d812f4aaf1458faa2d24a6889cc3f0" cid="PROP400" type="property" owner="a4e0472571d1454caba8d288bacbc48f" creation-date="07/11/2023 15:31:13" visibility="private">
       <structural-feature type="MidDataProfile" type-id="Class:062db154a441474690c6b0a1f57b74c1" />
     </item>
@@ -3833,31 +3854,6 @@ Qué se hace con el código de error?</comment>
       </style>
       <structural-feature type="DrvRsPropertiesC" type-id="Class:dfd5966eda3143f68c928f90160416cf" />
       <property redefines="419caf045eb644e6bd66e19b1974e461" />
-    </item>
-    <item id="c52fc75995cd46f1b40fe9f20ffe6234" cid="PROP405" type="property" name="mode" owner="922c942e1eff4320bf4cdc8773bc8a61" creation-date="07/13/2023 08:31:55" visibility="public">
-      <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-        <text-style type="name" color="#555555" font="Segoe UI;11.25;B" />
-        <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-        <text-style type="text" color="#555555" font="Segoe UI;9.75;" horizontal-alignment="left" />
-        <text-style type="tagged-value" color="#555555" font="Segoe UI;9.75;" />
-        <text-style type="stereotype" color="#555555" font="Segoe UI;9;I" />
-        <background type="solid" colors="#F2F2F2,#F2F2F2" />
-        <border color="#555555" width="2" />
-        <label-connector color="#80000000" dash-style="Dash" />
-        <alternate-styles>
-          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
-            <text-style type="name" color="#E9E9E9" font="Segoe UI;11.25;B" />
-            <text-style type="part-header" color="#1E1E1E" font="Verdana;9;I" />
-            <text-style type="text" color="#E9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" />
-            <text-style type="tagged-value" color="#E9E9E9" font="Segoe UI;9.75;" />
-            <text-style type="stereotype" color="#E9E9E9" font="Segoe UI;9;I" />
-            <background type="solid" colors="#203D85,#203D85" />
-            <border color="#203D85" width="2" />
-            <label-connector color="#80000000" dash-style="Dash" />
-          </alternate-style>
-        </alternate-styles>
-      </style>
-      <property derived="true" />
     </item>
     <item id="24622204eae84eeda7253cb8988e0dc7" cid="PROP145" type="property" name="_MAX_LEN_IN_BYTES" owner="f37f2996c2e8442b8346358f88986caf" creation-date="03/31/2022 08:40:15" visibility="private">
       <style style-name="Custom Style" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFF" accuracy="0.9">
@@ -4051,7 +4047,7 @@ Qué se hace con el código de error?</comment>
               </meta>
               <abstract-items />
               <sub-models />
-              <diagram type="uml-class" id="p7769f81280324311900a7034d7f7eb70_197655024" name="drv_can" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="263,-472" zoom="1.2">
+              <diagram type="uml-class" id="p7769f81280324311900a7034d7f7eb70_197655024" name="drv_can" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-141,-423" zoom="0.9">
                 <style>
                   <background-color index="1" color="#FFFFFFFF" />
                   <background-color index="2" color="#FFFFFFFF" />
@@ -8981,7 +8977,7 @@ Qué se hace con el código de error?</comment>
                   </item>
                 </layer>
               </diagram>
-              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="7" overview-order-index="5" uid="" name-style="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1117,-689" zoom="0.9">
+              <diagram type="uml-class" id="p9629b0b53735468194af261e818cec09_526256545" name="drv_pwr" order-index="7" overview-order-index="5" uid="" name-style="" auto-routed-paths="false" default-line-style="default" show-frame="false" view-location="-1191,-779" zoom="0.9">
                 <style>
                   <background-color index="1" color="#FFFFFFFF" />
                   <background-color index="2" color="#FFFFFFFF" />
@@ -9040,31 +9036,11 @@ Qué se hace con el código de error?</comment>
                     <operations>
                       <operation id="o909e23f271a945639bb485533e064cff640" cid="OP086" name="DrvPwrDataC" creation-date="07/13/2023 09:32:54" type="" type-id="" visibility="public">
                         <parameters>
-                          <parameter id="pf24f9d7339e54142855577bfde943983" name="status" type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698">
-                            <tagged-values>
-                              <tagged-value id="tv05204001aefe4918ba5b4880178b17c1" name="set_status" type="reference" multiple="false" hidden="false" ref="8836d151741a43f596207d7736420650" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="p82a67e3b11834412bfb1bd010d690971" name="mode" type="" type-id="">
-                            <tagged-values>
-                              <tagged-value id="tv9feaa3f1ab23415d9d7fa2e15d9ac631" name="set_mode" type="reference" multiple="false" hidden="false" ref="c52fc75995cd46f1b40fe9f20ffe6234" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="p5991b542253f4be49b7b795810f4e1fd" name="voltage" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tvf7ae7e67cc5c4996b7767486adcaf093" name="set_voltage" type="reference" multiple="false" hidden="false" ref="97fc7416d03f434e99496693fcfbd92b" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="pc2062cce9cdc4c23b194421d522aeea0" name="current" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tvdd6d47bdeda345f7905b19ab72048829" name="set_current" type="reference" multiple="false" hidden="false" ref="8482d3e0325e4ce4a60c07829c927b3a" />
-                            </tagged-values>
-                          </parameter>
-                          <parameter id="p5174bde9bf1b49f2b55f9419cbc892d5" name="power" type="int" type-id="Python.int">
-                            <tagged-values>
-                              <tagged-value id="tv0f45ed9db49b401394e805db1b196b97" name="set_power" type="reference" multiple="false" hidden="false" ref="e8b85c34172c4c39a2537e281e986691" />
-                            </tagged-values>
-                          </parameter>
+                          <parameter id="pf24f9d7339e54142855577bfde943983" name="status" type="DrvPwrStatusC" type-id="Class:di04826126ae7342d197787703ead1ba195698" />
+                          <parameter id="p82a67e3b11834412bfb1bd010d690971" name="mode" type="" type-id="" />
+                          <parameter id="p5991b542253f4be49b7b795810f4e1fd" name="voltage" type="int" type-id="Python.int" />
+                          <parameter id="pc2062cce9cdc4c23b194421d522aeea0" name="current" type="int" type-id="Python.int" />
+                          <parameter id="p5174bde9bf1b49f2b55f9419cbc892d5" name="power" type="int" type-id="Python.int" />
                         </parameters>
                         <stereotypes>
                           <stereotype>create</stereotype>
@@ -9202,7 +9178,7 @@ Qué se hace con el código de error?</comment>
                       </operation>
                       <operation id="o464dc8457b7042c9993b14745848779f259" cid="OP018" name="__eq__" creation-date="07/06/2023 11:52:25" type="bool" type-id="Python.bool" visibility="undefined" abstract="true">
                         <parameters>
-                          <parameter id="pa528e6f369b94b308e66afc2421730f6" name="cmpObj" type="Python.Enum" type-id="Python.Enum" direction="In" />
+                          <parameter id="pa528e6f369b94b308e66afc2421730f6" name="cmpObj" type="Enum" type-id="Python.Enum" direction="In" />
                         </parameters>
                         <source-codes>
                           <source-code language="ActionScript" />
@@ -9271,11 +9247,14 @@ Qué se hace con el código de error?</comment>
                     <operations>
                       <operation id="oe5895dead26a48b6afaa4a5042d1b06a512" cid="OP049" name="DrvPwrDeviceC" creation-date="07/10/2023 13:47:41" type="" type-id="" visibility="public">
                         <parameters>
-                          <parameter id="pad601b22819f49b5ae9a333dda5ce166" name="handler" type="" type-id="" direction="In" />
+                          <parameter id="pad601b22819f49b5ae9a333dda5ce166" name="handler" type="Any" type-id="Any" direction="In" />
                         </parameters>
                         <stereotypes>
                           <stereotype>create</stereotype>
                         </stereotypes>
+                        <source-codes>
+                          <source-code language="ActionScript" />
+                        </source-codes>
                       </operation>
                       <operation id="o99a468bbebe949dd936167c339ee364f83" cid="OP030" name="get_data" creation-date="07/10/2023 09:14:36" type="DrvPwrDataC" type-id="Class:2b892ff844e44a61b48f70f00eb777fd" visibility="public" virtual="true">
                         <source-codes>
@@ -11370,6 +11349,20 @@ Qué se hace con el código de error?</comment>
               </diagram>
             </model>
           </sub-models>
+        </model>
+        <model id="p343c7ced83a54197a29e87e9ed007d98_491496441" name="ActivityDiagrams" namespace="" order-index="7">
+          <meta>
+            <authors>
+              <author> </author>
+            </authors>
+            <description />
+            <creation-date>07/13/2023 14:12:05</creation-date>
+            <change-date>01/01/0001 00:00:00</change-date>
+            <revision-count>0</revision-count>
+            <version />
+          </meta>
+          <abstract-items />
+          <sub-models />
         </model>
       </sub-models>
       <diagram type="uml-component" id="pe588d84103e54abb931e30f5a3c4129f_157848642" name="ComponentsDiagram" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="485,-108" zoom="0.9">
