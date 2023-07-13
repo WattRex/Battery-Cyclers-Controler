@@ -25,10 +25,10 @@ from enum import Enum
 #######################          MODULE IMPORTS          #######################
 
 
-sys.path.append(os.getcwd())  #get absolute path
 #######################          PROJECT IMPORTS         #######################
 from drv.drv_scpi import DrvScpiHandlerC
 
+sys.path.append(os.getcwd())  #get absolute path
 #######################              ENUMS               #######################
 class DrvPwrStatusE(Enum):
     '''Status of the driver power.
@@ -41,9 +41,16 @@ class DrvPwrStatusE(Enum):
 class DrvPwrStatusC:
     '''Handles status of the driver power.
     '''
-    def __init__(self, in_error: int, error: DrvPwrStatusE) -> None:
-        self.status: DrvPwrStatusE = error
-        self.__error_code: int = in_error
+    def __init__(self, error: int|DrvPwrStatusE) -> None:
+        if isinstance(error, DrvPwrStatusE):
+            self.status = error
+            self.__error_code = error.value
+        else:
+            self.__error_code = error
+            if error > 0:
+                self.status = DrvPwrStatusE.INTERNAL_ERROR
+            else:
+                self.status = DrvPwrStatusE(error)
 
     def __str__(self) -> str:
         result = f"Error code: {self.__error_code} \t Status: {self.status}"
@@ -93,51 +100,34 @@ class DrvPwrPropertiesC:
     '''
     def __init__(self, model: str = None, serial_number: str = None, max_volt_limit: int = 0,
                  max_current_limit: int = 0, max_power_limit: int = 0) -> None:
-        self.__model: str = model
-        self.__serial_number: str = serial_number
-        self.__max_volt_limit: int = max_volt_limit
-        self.__max_current_limit: int = max_current_limit
-        self.__max_power_limit: int = max_power_limit
+        self.model: str = model
+        self.serial_number: str = serial_number
+        self.max_volt_limit: int = max_volt_limit
+        self.max_current_limit: int = max_current_limit
+        self.max_power_limit: int = max_power_limit
 
-class DrvPwrMeasuresC:
-    '''Stores driver measurements.
+
+class DrvPwrDataC:
+    '''Device data storage.
     '''
-    def __init__(self, voltage: int, current: int, power: int) -> None:
+    def __init__(self,  status: DrvPwrStatusC, mode, voltage: int,
+                 current: int, power: int) -> None:
+        self.status: DrvPwrStatusC = status
+        self.mode = mode #TODO: No está seguro que hacer con el aún
         self.voltage: int = voltage
         self.current: int = current
         self.power: int = power
 
 
-class DrvPwrDataC(DrvPwrMeasuresC):
-    '''Stores driver data.
-    '''
-    def __init__(self, mode, status: DrvPwrStatusC, voltage: int, current: int, power: int) -> None:
-        super().__init__(voltage = voltage, current = current, power = power)
-        self.mode = mode #TODO: No está seguro que hacer con el aún
-        self.status: DrvPwrStatusC = status
-
-
 class DrvPwrDeviceC:
-    ''' Principal class.
+    '''Representation of power devices.
     '''
-    def __init__(self, port: str, separator: str) -> None:
-        self.__device_handler: DrvScpiHandlerC  = DrvScpiHandlerC(port=port, separator=separator)
-        self.__current_data: DrvPwrDataC        = None  #TODO: que hacer?
-        self.__properties: DrvPwrPropertiesC    = None  #TODO: que hacer?
+    def __init__(self, handler: DrvScpiHandlerC) -> None:
+        self.__device_handler: DrvScpiHandlerC  = handler
+        self.__current_data: DrvPwrDataC        = None
+        self.__properties: DrvPwrPropertiesC    = None
 
-    @property
-    def get_measures(self) -> DrvPwrMeasuresC:
-        '''Get driver measurements.
-        Args:
-            - None
-        Returns:
-            - result (DrvPwrMeasuresC): Driver measurements.
-        Raises:
-            - None
-        '''
-        return self.__current_data #TODO: solo la parte de medidas
 
-    @property
     def get_data(self) -> DrvPwrDataC:
         '''Obtain ...
         Args:
@@ -149,7 +139,7 @@ class DrvPwrDeviceC:
         '''
         return self.__current_data
 
-    @property
+
     def get_properties(self) -> DrvPwrPropertiesC:
         '''Obtain ...
         Args:
@@ -160,6 +150,7 @@ class DrvPwrDeviceC:
             - None
         '''
         return self.__properties
+
 
     def close(self) -> None:
         '''Close the driver.
