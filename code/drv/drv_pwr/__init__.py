@@ -1,12 +1,10 @@
-from .drv_pwr import DrvPwrDataC, DrvPwrDeviceC, DrvPwrMeasuresC, DrvPwrPropertiesC, DrvPwrStatusC, DrvPwrStatusE
-
-
-
+''' Driver power imports.
+'''
+from .drv_pwr import DrvPwrDataC, DrvPwrDeviceC, DrvPwrPropertiesC, DrvPwrStatusC, DrvPwrStatusE
 
 __all__ = [
     'DrvPwrDataC',
     'DrvPwrDeviceC',
-    'DrvPwrMeasuresC',
     'DrvPwrPropertiesC',
     'DrvPwrStatusC',
     'DrvPwrStatusE'

@@ -3,7 +3,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Driver for SCPI devices.
+Driver for power devices.
 """
 
 #######################        MANDATORY IMPORTS         #######################
