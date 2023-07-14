@@ -34,12 +34,16 @@ from sys_abs.sys_conf.sys_conf import sys_conf_read_config_params
 
 
 #######################              ENUMS               #######################
-MAX_RESETS = 2
+
 
 #######################             CLASSES              #######################
 class DrvDbSqlEngineC:
-    '''Classmethod to create a SqlAlchemy engine.
     '''
+    Classmethod to create a SqlAlchemy engine.
+    '''
+
+    __MAX_RESETS = 2
+
     def __init__(self, config_file='../config/.cred.yaml'):
         '''
         Create an connector to the MySQL database server
@@ -65,7 +69,7 @@ class DrvDbSqlEngineC:
             raise err
 
 
-    def commit_changes(self):
+    def commit_changes(self) -> None:
         '''
         Perform a commit againt the used database. If any error occurs, a 
         rollback is performed.
@@ -81,7 +85,7 @@ class DrvDbSqlEngineC:
             self.session.rollback()
 
 
-    def close_connection(self):
+    def close_connection(self) -> None:
         '''
         Close the connection with the database.
         '''
@@ -90,7 +94,8 @@ class DrvDbSqlEngineC:
 
 
     def __reset_engine(self) -> None:
-        '''Create a new engine and initialize it
+        '''
+        Create a new engine and initialize it
         '''
         params = sys_conf_read_config_params(filename=self.config_file, section='database')
         url = 'mysql+mysqlconnector://' + params['user'] + ':' + params['password'] + '@' \
@@ -100,14 +105,15 @@ class DrvDbSqlEngineC:
         self.session.begin()
 
 
-    def reset(self):
-        '''Resets the connection to the database .
+    def reset(self) -> None:
+        '''
+        Resets the connection to the database .
 
         Raises:
             ConnectionError: Max db connection resets reached. Connection \
                                   with db may have been lost.
         '''
-        if self.n_resets <= MAX_RESETS:
+        if self.n_resets <= self.__MAX_RESETS:
             self.__reset_engine()
             self.n_resets += 1
         else:
