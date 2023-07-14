@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 '''
 Create a ORM model of the defined database.
+
+This document's base structure is generated automaticly using sqlacodegen extracting data from DB.\
+Attributes in this script does not follow PEP8 snake_case naming convention.
 '''
 #######################        MANDATORY IMPORTS         #######################
 import sys
@@ -50,7 +53,7 @@ class DrvDbBatteryC(Base):
         Index('Battery_unq_1', 'Name', 'Manufacturer', 'Model', 'SN', unique=True),
     )
 
-    BatID = Column(MEDIUMINT(), primary_key=True)
+    BatID = Column(MEDIUMINT(unsigned=True), primary_key=True)
     Name = Column(String(30), nullable=False)
     Description = Column(String(250))
     Manufacturer = Column(String(20), nullable=False)
@@ -58,16 +61,16 @@ class DrvDbBatteryC(Base):
     SN = Column(String(30), nullable=False)
     FabDate = Column(DateTime, nullable=False)
     Tech = Column(DrvDbBatteryTechE, nullable=False)
-    CellsNum = Column(MEDIUMINT(), nullable=False)
-    CellVoltMin = Column(MEDIUMINT())
-    CellVoltMax = Column(MEDIUMINT())
-    VoltMin = Column(MEDIUMINT(), nullable=False)
-    VoltMax = Column(MEDIUMINT(), nullable=False)
+    CellsNum = Column(MEDIUMINT(unsigned=True), nullable=False)
+    CellVoltMin = Column(MEDIUMINT(unsigned=True))
+    CellVoltMax = Column(MEDIUMINT(unsigned=True))
+    VoltMin = Column(MEDIUMINT(unsigned=True), nullable=False)
+    VoltMax = Column(MEDIUMINT(unsigned=True), nullable=False)
     CurrMin = Column(MEDIUMINT(), nullable=False)
     CurrMax = Column(MEDIUMINT(), nullable=False)
 
 
-class DrvDbLithiumC(DrvDbBatteryC):
+class DrvDbLithiumC(Base):
     '''
     Class method to create a DRVDB model of database Lithium table.
     '''
@@ -77,8 +80,10 @@ class DrvDbLithiumC(DrvDbBatteryC):
     Capacity = Column(String(30), nullable=False)
     Chemistry = Column(DrvDbLithiumChemistryE, nullable=False)
 
+    Battery = relationship('DrvDbBatteryC')
 
-class DrvDbLeadAcidC(DrvDbBatteryC):
+
+class DrvDbLeadAcidC(Base):
     '''
     Class method to create a DRVDB model of database LeadAcid table.
     '''
@@ -88,19 +93,23 @@ class DrvDbLeadAcidC(DrvDbBatteryC):
     Capacity = Column(String(30), nullable=False)
     Chemistry = Column(DrvDbLeadAcidChemistryE, nullable=False)
 
+    Battery = relationship('DrvDbBatteryC')
 
-class DrvDbRedoxStackC(DrvDbBatteryC):
+
+class DrvDbRedoxStackC(Base):
     '''
     Class method to create a DRVDB model of database RedoxStack table.
     '''
     __tablename__ = 'RedoxStack'
 
     BatID = Column(ForeignKey('Battery.BatID'), primary_key=True)
-    ElectrodeSize = Column(MEDIUMINT(), nullable=False)
+    ElectrodeSize = Column(MEDIUMINT(unsigned=True), nullable=False)
     ElectrodeComposition = Column(String(30), nullable=False)
     BipolarType = Column(DrvDbBipolarTypeE, nullable=False)
     MembraneType = Column(DrvDbMembraneTypeE, nullable=False)
     ElectrolyteType = Column(DrvDbElectrolyteTypeE, nullable=False)
+
+    Battery = relationship('DrvDbBatteryC')
 
 
 class DrvDbCompatibleDeviceC(Base):
@@ -112,13 +121,13 @@ class DrvDbCompatibleDeviceC(Base):
         Index('CompatibleDevices_unq_1', 'Name', 'Manufacturer', 'DeviceType', unique=True),
     )
 
-    CompDevID = Column(MEDIUMINT(), primary_key=True)
+    CompDevID = Column(MEDIUMINT(unsigned=True), primary_key=True)
     Name = Column(String(30), nullable=False)
     Manufacturer = Column(String(30), nullable=False)
     DeviceType = Column(DrvDbDeviceTypeE, nullable=False)
-    MinSWVersion = Column(SMALLINT(), nullable=False)
-    VoltMin = Column(MEDIUMINT())
-    VoltMax = Column(MEDIUMINT())
+    MinSWVersion = Column(SMALLINT(unsigned=True), nullable=False)
+    VoltMin = Column(MEDIUMINT(unsigned=True))
+    VoltMax = Column(MEDIUMINT(unsigned=True))
     CurrMin = Column(MEDIUMINT())
     CurrMax = Column(MEDIUMINT())
 
@@ -132,13 +141,13 @@ class DrvDbComputationalUnitC(Base):
         Index('ComputationalUnit_unq_1', 'Name', 'IP', 'Port', unique=True),
     )
 
-    CUID = Column(MEDIUMINT(), primary_key=True)
+    CUID = Column(MEDIUMINT(unsigned=True), primary_key=True)
     Name = Column(String(50), nullable=False)
     IP = Column(String(20), nullable=False)
-    Port = Column(SMALLINT(), nullable=False)
+    Port = Column(SMALLINT(unsigned=True), nullable=False)
     User = Column(String(20), nullable=False)
     Pass = Column(String(100), nullable=False)
-    LastConection = Column(DateTime, nullable=False)
+    LastConnection = Column(DateTime, nullable=False)
     Available = Column(DrvDbAvailableCuE, nullable=False)
 
 
@@ -148,7 +157,7 @@ class DrvDbCycleStationC(Base):
     '''
     __tablename__ = 'CycleStation'
 
-    CSID = Column(MEDIUMINT(), primary_key=True, nullable=False)
+    CSID = Column(MEDIUMINT(unsigned=True), primary_key=True, nullable=False)
     CUID = Column(ForeignKey('ComputationalUnit.CUID'), primary_key=True, \
                   nullable=False, index=True)
     Name = Column(String(30), nullable=False)
@@ -167,7 +176,7 @@ class DrvDbUsedDeviceC(Base):
         Index('UsedDevices_unq_1', 'CSID', 'CompDevID', 'SN', unique=True),
     )
 
-    DevID = Column(MEDIUMINT(), primary_key=True, nullable=False)
+    DevID = Column(MEDIUMINT(unsigned=True), primary_key=True, nullable=False)
     CSID = Column(ForeignKey('CycleStation.CSID'), primary_key=True, nullable=False)
     CompDevID = Column(ForeignKey('CompatibleDevices.CompDevID'), nullable=False, index=True)
     SN = Column(String(30), nullable=False)
@@ -182,11 +191,11 @@ class DrvDbProfileC(Base):
     '''
     __tablename__ = 'Profile'
 
-    ProfID = Column(MEDIUMINT(), primary_key=True)
+    ProfID = Column(MEDIUMINT(unsigned=True), primary_key=True)
     Name = Column(String(40), nullable=False)
     Description = Column(String(250), nullable=False)
-    VoltMax = Column(MEDIUMINT(), nullable=False)
-    VoltMin = Column(MEDIUMINT(), nullable=False)
+    VoltMax = Column(MEDIUMINT(unsigned=True), nullable=False)
+    VoltMin = Column(MEDIUMINT(unsigned=True), nullable=False)
     CurrMax = Column(MEDIUMINT(), nullable=False)
     CurrMin = Column(MEDIUMINT(), nullable=False)
 
@@ -197,7 +206,7 @@ class DrvDbExperimentC(Base):
     '''
     __tablename__ = 'Experiment'
 
-    ExpID = Column(MEDIUMINT(), primary_key=True)
+    ExpID = Column(MEDIUMINT(unsigned=True), primary_key=True)
     Name = Column(String(30), nullable=False)
     Description = Column(String(250), nullable=False)
     DataCreation = Column(DateTime, nullable=False)
@@ -220,9 +229,9 @@ class DrvDbAlarmC(Base):
     __tablename__ = 'Alarm'
 
     ExpID = Column(ForeignKey('Experiment.ExpID'), primary_key=True, nullable=False)
-    AlarmID = Column(MEDIUMINT(), primary_key=True, nullable=False)
+    AlarmID = Column(MEDIUMINT(unsigned=True), primary_key=True, nullable=False)
     Timestamp = Column(DateTime, nullable=False)
-    Code = Column(MEDIUMINT(), nullable=False)
+    Code = Column(MEDIUMINT(unsigned=True), nullable=False)
     Value = Column(MEDIUMINT(), nullable=False)
 
     Experiment = relationship('DrvDbExperimentC')
@@ -238,7 +247,7 @@ class DrvDbStatusC(Base):
     DevID = Column(ForeignKey('UsedDevices.DevID'), primary_key=True, nullable=False, index=True)
     Timestamp = Column(DateTime, nullable=False)
     Status = Column(DrvDbEquipStatusE, nullable=False)
-    ErrorCode = Column(SMALLINT(), nullable=False)
+    ErrorCode = Column(SMALLINT(unsigned=True), nullable=False)
 
     UsedDevice = relationship('DrvDbUsedDeviceC')
     Experiment = relationship('DrvDbExperimentC')
@@ -252,8 +261,8 @@ class DrvDbRedoxElectrolyteC(Base):
 
     ExpID = Column(ForeignKey('Experiment.ExpID'), primary_key=True, nullable=False)
     BatID = Column(ForeignKey('Battery.BatID'), primary_key=True, nullable=False, index=True)
-    ElectrolyteVol = Column(MEDIUMINT(), nullable=False)
-    MaxFlowRate = Column(MEDIUMINT(), nullable=False)
+    ElectrolyteVol = Column(MEDIUMINT(unsigned=True), nullable=False)
+    MaxFlowRate = Column(MEDIUMINT(unsigned=True), nullable=False)
 
     Battery = relationship('DrvDbBatteryC')
     Experiment = relationship('DrvDbExperimentC')
@@ -282,7 +291,7 @@ class DrvDbGenericMeasureC(Base):
     __tablename__ = 'GenericMeasures'
 
     ExpID = Column(ForeignKey('Experiment.ExpID'), primary_key=True, nullable=False)
-    MeasID = Column(INTEGER(), primary_key=True, nullable=False)
+    MeasID = Column(INTEGER(unsigned=True), primary_key=True, nullable=False)
     Timestamp = Column(DateTime, nullable=False)
     InstrID = Column(ForeignKey('Instructions.InstrID'), nullable=False, index=True)
     Voltage = Column(MEDIUMINT(), nullable=False)
@@ -298,7 +307,7 @@ class DrvDbMeasuresDeclarationC(Base):
     '''
     __tablename__ = 'MeasuresDeclaration'
 
-    MeasType = Column(MEDIUMINT(), primary_key=True)
+    MeasType = Column(MEDIUMINT(unsigned=True), primary_key=True)
     MeasName = Column(String(20), nullable=False, unique=True)
 
 
@@ -316,7 +325,7 @@ class DrvDbExtendedMeasureC(Base):
     ExpID = Column(ForeignKey('Experiment.ExpID'), primary_key=True, nullable=False)
     MeasType = Column(ForeignKey('MeasuresDeclaration.MeasType'), \
                       primary_key=True, nullable=False, index=True)
-    MeasID = Column(INTEGER(), primary_key=True, nullable=False)
+    MeasID = Column(INTEGER(unsigned=True), primary_key=True, nullable=False)
     Value = Column(MEDIUMINT(), nullable=False)
 
     GenericMeasure = relationship('DrvDbGenericMeasureC')
